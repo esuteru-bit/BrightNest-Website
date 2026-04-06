@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Fond vert -->
+  <rect width="1200" height="630" fill="#1B6B5A"/>
+  <!-- Texture subtile -->
+  <rect width="1200" height="630" fill="url(#grain)" opacity="0.04"/>
+  <!-- Bande ambre en bas -->
+  <rect y="590" width="1200" height="40" fill="#E8931A"/>
+  <!-- Cercle décoratif -->
+  <circle cx="1050" cy="120" r="220" fill="#2d8f78" opacity="0.35"/>
+  <circle cx="150" cy="520" r="160" fill="#124a3f" opacity="0.5"/>
+  <!-- Logo BN -->
+  <rect x="80" y="80" width="72" height="72" rx="14" fill="#E8931A"/>
+  <text x="116" y="138" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#FFFFFF" text-anchor="middle">B</text>
+  <!-- Nom -->
+  <text x="80" y="260" font-family="Georgia, serif" font-size="76" font-weight="700" fill="#FFFFFF">BrightNest Services</text>
+  <!-- Tagline -->
+  <text x="80" y="340" font-family="Arial, sans-serif" font-size="34" fill="rgba(255,255,255,0.80)">Ménage à domicile · Nettoyage Airbnb</text>
+  <!-- Localisation -->
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="30" fill="rgba(255,255,255,0.65)">📍 Montpellier</text>
+  <!-- Badge crédit impôt -->
+  <rect x="80" y="440" width="420" height="58" rx="29" fill="#E8931A"/>
+  <text x="290" y="478" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">💶 50% crédit d'impôt — Agréée SAP</text>
+  <!-- URL -->
+  <text x="80" y="575" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.45)">brightnestservices.fr</text>
+</svg>
