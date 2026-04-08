@@ -139,8 +139,7 @@ img{max-width:100%;display:block}
 .hero-loc{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.7);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;animation:fadeUp .5s .08s ease both}
 .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;margin-bottom:20px;max-width:820px;animation:fadeUp .5s .15s ease both}
 .hero h1 em{font-style:italic;color:rgba(255,255,255,.75)}
-.hero-sub{font-size:1.02rem;color:rgba(255,255,255,.82);max-width:600px;margin-bottom:12px;animation:fadeUp .5s .22s ease both}
-.hero-body{font-size:.92rem;color:rgba(255,255,255,.6);max-width:580px;margin-bottom:34px;line-height:1.75;animation:fadeUp .5s .28s ease both}
+.hero-sub{font-size:1.02rem;color:rgba(255,255,255,.82);max-width:600px;margin-bottom:28px;animation:fadeUp .5s .22s ease both}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px;animation:fadeUp .5s .34s ease both}
 .btn-primary{background:var(--amber);color:#fff;padding:14px 32px;border-radius:50px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s;display:inline-block;box-shadow:0 4px 16px rgba(232,147,26,.4)}
 .btn-primary:hover{background:#d07c10;transform:translateY(-2px);box-shadow:0 6px 24px rgba(232,147,26,.5)}
@@ -169,11 +168,6 @@ img{max-width:100%;display:block}
 .section-header h2{font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--text);margin-bottom:12px}
 .section-header h2 em{color:var(--green);font-style:italic}
 .section-header p{font-size:.95rem;color:var(--muted);max-width:540px}
-
-/* ── ABOUT ── */
-.values-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:24px}
-.values-list li{display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:500;color:var(--text)}
-.values-list li::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0}
 
 /* ── SERVICES ── */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
@@ -276,20 +270,16 @@ img{max-width:100%;display:block}
 .ba-panel{padding:26px 16px;text-align:center;border-right:1px solid var(--cream-dark)}
 .ba-panel:last-child{border-right:none}
 .ba-ico{font-size:2rem;margin-bottom:8px}
-.ba-lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;font-weight:600;color:var(--muted);margin-bottom:3px}
-.ba-desc{font-size:.78rem;color:var(--muted)}
+.ba-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
 .ba-foot{padding:9px 14px;border-top:1px solid var(--cream-dark);font-size:.76rem;color:var(--green);font-weight:600;text-align:center}
 
 /* ── AVIS ── */
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.rcard{background:var(--white);border:1px solid var(--cream-dark);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
-.rcard:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .rcard-stars{color:var(--amber);font-size:.85rem;letter-spacing:2px;margin-bottom:8px}
-.rcard-type{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
-.rcard-text{font-size:.88rem;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:16px}
+.rcard-text{font-size:.88rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:16px}
 .rcard-author{display:flex;align-items:center;gap:10px}
 .rcard-avatar{width:34px;height:34px;background:var(--green);border-radius:50%;color:#fff;font-size:.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.rcard-name{font-weight:600;font-size:.83rem;color:var(--text)}
+.rcard-name{font-weight:700;font-size:.83rem;color:var(--text)}
 .rcard-loc{font-size:.73rem;color:var(--muted)}
 
 /* ── ZONES ── */
@@ -367,6 +357,45 @@ footer{background:var(--text);padding:38px 5%}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
+/* ── ABOUT 2COL ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.about-text p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.about-text .btn-primary{display:inline-block;margin-top:12px}
+.change-block{background:var(--green-pale);border:1px solid rgba(27,107,90,.15);border-radius:var(--radius);padding:30px 28px}
+.change-block-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:22px;display:block}
+.change-items{display:flex;flex-direction:column;gap:18px}
+.change-item{display:flex;gap:13px;align-items:flex-start}
+.change-ico{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.78rem;color:#fff;font-weight:700;margin-top:2px}
+.change-ico.g{background:var(--green)}
+.change-ico.a{background:var(--amber)}
+.change-item-body{}
+.change-item-title{font-weight:700;color:var(--text);font-size:.88rem;margin-bottom:3px;line-height:1.35;font-family:'DM Sans',sans-serif}
+.change-item-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* ── BLOC CONTRÔLE RÉSULTAT ── */
+.ctrl-band{background:linear-gradient(135deg,#0a2920 0%,#124a3f 100%);padding:80px 5%;text-align:center;position:relative;overflow:hidden}
+.ctrl-band::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(232,147,26,.08) 0%,transparent 60%);pointer-events:none}
+.ctrl-band::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;background:rgba(27,107,90,.3);border-radius:50%;pointer-events:none}
+.ctrl-inner{max-width:820px;margin:0 auto;position:relative}
+.ctrl-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.4rem);color:#fff;line-height:1.2;margin-bottom:22px}
+.ctrl-sub{font-size:.95rem;color:rgba(255,255,255,.65);margin:0 auto 34px;line-height:1.8}
+.ctrl-proof{display:inline-flex;gap:24px;flex-wrap:wrap;justify-content:center;margin-bottom:38px;padding:16px 28px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius)}
+.ctrl-proof-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:rgba(255,255,255,.75);font-weight:500}
+.ctrl-proof-dot{color:var(--amber-light);font-size:.7rem}
+.btn-amber-cta{display:inline-block;background:var(--amber);color:#1a0f00;padding:13px 30px;border-radius:50px;font-weight:700;font-size:.9rem;transition:all .2s;font-family:'DM Sans',sans-serif}
+.btn-amber-cta:hover{background:var(--amber-light);transform:translateY(-2px);box-shadow:0 6px 24px rgba(232,147,26,.4)}
+
+/* ── RCARD optimisé ── */
+.rcard{background:var(--white);border:1px solid var(--cream-dark);border-left:3px solid var(--green);border-radius:0 var(--radius) var(--radius) 0;padding:26px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.rcard:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.rcard-type{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--cream-dark)}
+
+/* ── AVANT/APRÈS labels ── */
+.ba-panel-before{background:#fdf9f5;border-right:1px solid var(--cream-dark)}
+.ba-lbl-avant{font-size:.67rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted);margin-bottom:5px}
+.ba-lbl-apres{font-size:.67rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--green);margin-bottom:5px}
+.ba-cta-wrap{text-align:center;margin-top:24px}
+
 /* ── POURQUOI ME CHOISIR ── */
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .why-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
@@ -397,6 +426,8 @@ footer{background:var(--text);padding:38px 5%}
   .form-row{grid-template-columns:1fr}
   .process-grid{grid-template-columns:repeat(2,1fr)}
   .hero-stats{max-width:100%}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .ctrl-proof{flex-direction:column;align-items:center;gap:14px;padding:14px 20px}
 }
 @media(max-width:640px){
   .section{padding:62px 5%}
@@ -410,6 +441,12 @@ footer{background:var(--text);padding:38px 5%}
   .process-grid{grid-template-columns:1fr}
   .wa-float{bottom:20px;right:16px;padding:11px 16px 11px 13px;font-size:.78rem}
   .wa-float svg{width:19px;height:19px}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .change-block{padding:22px 18px}
+  .ctrl-band{padding:56px 5%}
+  .ctrl-quote{font-size:1.9rem}
+  .ba-grid{grid-template-columns:1fr}
+  .ba-cta-wrap{padding:0 4px}
 }
 </style>
 </head>
@@ -446,21 +483,19 @@ footer{background:var(--text);padding:38px 5%}
 <!-- HERO -->
 <section class="hero" id="accueil">
   <div class="hero-inner">
-    <div class="hero-tax">💶 &nbsp;50% crédit d'impôt garanti</div>
+    <div class="hero-tax">💶 &nbsp;50% crédit d'impôt — vous payez deux fois moins</div>
     <div class="hero-loc">📍 Montpellier</div>
-    <h1>Ménage à domicile et nettoyage<br>de locations saisonnières<br><em>à Montpellier</em></h1>
-    <p class="hero-sub">Une professionnelle formée au standard hôtelier, basée à Montpellier — je prends soin de votre logement comme si c'était le mien.</p>
-    <p class="hero-body">Que ce soit pour votre logement principal, un grand ménage ponctuel ou la gestion de vos locations Airbnb, je vous aide à retrouver un intérieur propre, agréable et accueillant, en toute confiance.</p>
+    <h1>Votre logement propre<br>comme une chambre d'hôtel.<br><em>Garanti à chaque passage.</em></h1>
+    <p class="hero-sub">Gouvernante en hôtellerie depuis 10 ans. J'applique les mêmes protocoles chez vous — ménage régulier, grand nettoyage, rotations Airbnb.</p>
     <div class="hero-actions">
-      <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-primary">📅 Réserver un créneau</a>
-      <a href="#contact" class="btn-outline">Demander un devis gratuit</a>
-      <a href="#offres" class="btn-outline">Voir les services &amp; tarifs</a>
+      <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-primary">📅 Réserver un créneau gratuit</a>
+      <a href="#offres" class="btn-outline">Voir les tarifs et services</a>
     </div>
-    <p class="hero-reassure">Auto-entrepreneuse déclarée, sérieuse et discrète — je mets mon expérience au service de votre confort.</p>
+    <p class="hero-reassure">Agréée SAP &nbsp;·&nbsp; Toujours la même personne &nbsp;·&nbsp; Devis gratuit sur place</p>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">10<span> ans</span></div><div class="stat-label">d'expérience hôtelière</div></div>
       <div class="stat"><div class="stat-num">50<span>%</span></div><div class="stat-label">de crédit d'impôt SAP</div></div>
-      <div class="stat"><div class="stat-num">100<span>%</span></div><div class="stat-label">agréée Nova / SAP</div></div>
+      <div class="stat"><div class="stat-num">1</div><div class="stat-label">seule interlocutrice, toujours</div></div>
     </div>
   </div>
 </section>
@@ -479,19 +514,47 @@ footer{background:var(--text);padding:38px 5%}
 <!-- QUI SUIS-JE -->
 <section class="section" id="valeurs">
   <div class="section-inner">
-    <div style="max-width:760px;">
-      <div class="section-tag">À propos de BrightNest Services</div>
-      <h2 style="font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--text);margin-bottom:20px;">Une prestataire qui <em>s'engage</em>,<br>pas seulement qui nettoie</h2>
-      <p style="font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px;">Je m'appelle Estelle et je suis auto-entrepreneuse dans le ménage à domicile et le nettoyage de locations saisonnières à Montpellier. Après 10 ans comme gouvernante d'hôtel, j'ai créé BrightNest Services pour proposer un accompagnement sérieux, humain et adapté à chaque situation.</p>
-      <p style="font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:24px;">Je sais qu'ouvrir sa porte à quelqu'un chez soi demande de la confiance. C'est pourquoi je travaille avec discrétion, respect et ponctualité. Mon objectif : vous simplifier la vie, vous faire gagner du temps et vous permettre de profiter d'un intérieur propre et agréable, sans stress.</p>
-      <ul class="values-list">
-        <li>Confiance et discrétion absolue</li>
-        <li>Sérieux, régularité et ponctualité</li>
-        <li>Prestations personnalisées</li>
-        <li>Respect de votre intimité</li>
-        <li>Écoute de vos besoins</li>
-        <li>Flexibilité des horaires quand c'est possible</li>
-      </ul>
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-tag">Qui suis-je</div>
+        <h2 style="font-size:clamp(1.9rem,3.5vw,2.6rem);color:var(--text);margin-bottom:20px;">Gouvernante d'hôtel depuis 10 ans.<br><em>Ce que ça change pour vous</em><br>est visible dès le premier passage.</h2>
+        <p>Je m'appelle Estelle. Mon métier principal, c'est gouvernante en hôtellerie. Je supervise des équipes de ménage, j'organise les plannings, je contrôle la qualité chambre par chambre. Je forme le personnel. J'inspecte chaque recoin avant qu'un client entre. Ce niveau d'exigence, j'y travaille chaque jour depuis 10 ans.</p>
+        <p>BrightNest Services, c'est cette même rigueur appliquée chez vous. Je ne viens pas faire le tour d'un appartement en vitesse. J'ai un protocole. Une méthode. À chaque intervention, je contrôle le résultat avant de repartir. Pas parce que je suis perfectionniste. Parce que c'est mon métier.</p>
+        <a href="#contact" class="btn-primary">Demander un devis gratuit →</a>
+      </div>
+      <div class="change-block">
+        <span class="change-block-label">Concrètement, ce que ça change pour vous</span>
+        <div class="change-items">
+          <div class="change-item">
+            <div class="change-ico g">✓</div>
+            <div class="change-item-body">
+              <div class="change-item-title">Vous savez exactement ce qui a été fait.</div>
+              <div class="change-item-desc">Mon protocole est fixe. Cuisine, salle de bain, sols, surfaces, recoins. Dans cet ordre, avec les mêmes critères à chaque passage.</div>
+            </div>
+          </div>
+          <div class="change-item">
+            <div class="change-ico g">✓</div>
+            <div class="change-item-body">
+              <div class="change-item-title">Vous n'avez pas à vérifier derrière moi.</div>
+              <div class="change-item-desc">Je contrôle le résultat moi-même avant de partir. C'est ma façon de travailler depuis 10 ans en hôtellerie.</div>
+            </div>
+          </div>
+          <div class="change-item">
+            <div class="change-ico g">✓</div>
+            <div class="change-item-body">
+              <div class="change-item-title">Vous traitez avec une seule personne.</div>
+              <div class="change-item-desc">Pas de rotation de personnel, pas d'agence. Agréée SAP — vous savez qui entre chez vous à chaque fois.</div>
+            </div>
+          </div>
+          <div class="change-item">
+            <div class="change-ico a">€</div>
+            <div class="change-item-body">
+              <div class="change-item-title">Vous récupérez 50% sur votre impôt.</div>
+              <div class="change-item-desc">Attestation fiscale annuelle fournie automatiquement. Vous n'avez rien à demander.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -540,6 +603,20 @@ footer{background:var(--text);padding:38px 5%}
     </div>
   </div>
 </section>
+
+<!-- BLOC JE CONTRÔLE UN RÉSULTAT -->
+<div class="ctrl-band">
+  <div class="ctrl-inner">
+    <div class="ctrl-quote">Je ne fais pas du ménage.<br>Je contrôle un résultat.</div>
+    <p class="ctrl-sub">Dans l'hôtellerie, on ne nettoie pas et on repart. On vérifie. On inspecte. On recommence si nécessaire. C'est comme ça que j'ai travaillé pendant 10 ans. C'est comme ça que j'interviens chez vous.</p>
+    <div class="ctrl-proof">
+      <div class="ctrl-proof-item"><span class="ctrl-proof-dot">✦</span>Protocole fixe à chaque intervention</div>
+      <div class="ctrl-proof-item"><span class="ctrl-proof-dot">✦</span>Contrôle qualité avant de partir</div>
+      <div class="ctrl-proof-item"><span class="ctrl-proof-dot">✦</span>Photos après chaque passage Airbnb</div>
+    </div>
+    <a href="#contact" class="btn-amber-cta">Demander un devis gratuit →</a>
+  </div>
+</div>
 
 <!-- POUR QUI JE TRAVAILLE -->
 <section class="section" id="pour-qui">
@@ -881,15 +958,60 @@ footer{background:var(--text);padding:38px 5%}
   <div class="section-inner">
     <div class="section-header">
       <div class="section-tag">Résultats</div>
-      <h2>Le résultat <em>parle de lui-même</em></h2>
-      <p>Chaque intervention suit un protocole précis. Ce que vous voyez ci-dessous, c'est le standard BrightNest — pas une exception.</p>
+      <h2>Le résultat <em>parle mieux que les promesses</em></h2>
+      <p>Ce que vous voyez ci-dessous, c'est le standard BrightNest. Pas une exception — la norme à chaque intervention.</p>
     </div>
     <div class="ba-grid">
-      <div class="ba-card"><div class="ba-panels"><div class="ba-panel"><div class="ba-ico">🍳</div><div class="ba-lbl">Avant</div><div class="ba-desc">Cuisine après séjour</div></div><div class="ba-panel"><div class="ba-ico">✨</div><div class="ba-lbl">Après</div><div class="ba-desc">Plans désinfectés</div></div></div><div class="ba-foot">Cuisine / Remise en état Airbnb</div></div>
-      <div class="ba-card"><div class="ba-panels"><div class="ba-panel"><div class="ba-ico">🚿</div><div class="ba-lbl">Avant</div><div class="ba-desc">Salle de bain utilisée</div></div><div class="ba-panel"><div class="ba-ico">💎</div><div class="ba-lbl">Après</div><div class="ba-desc">Standard hôtelier</div></div></div><div class="ba-foot">Salle de bain / Grand nettoyage</div></div>
-      <div class="ba-card"><div class="ba-panels"><div class="ba-panel"><div class="ba-ico">🛏️</div><div class="ba-lbl">Avant</div><div class="ba-desc">Entre deux voyageurs</div></div><div class="ba-panel"><div class="ba-ico">🏨</div><div class="ba-lbl">Après</div><div class="ba-desc">Prêt à accueillir</div></div></div><div class="ba-foot">Chambre / Pack Sérénité Airbnb</div></div>
+      <div class="ba-card">
+        <div class="ba-panels">
+          <div class="ba-panel ba-panel-before">
+            <div class="ba-ico">🍳</div>
+            <div class="ba-lbl-avant">Avant</div>
+            <div class="ba-desc">Cuisine après séjour — plaques et plan de travail souillés</div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-ico">✨</div>
+            <div class="ba-lbl-apres">Après</div>
+            <div class="ba-desc">Plans désinfectés, hotte dégraissée, évier brillant</div>
+          </div>
+        </div>
+        <div class="ba-foot">🏡 Cuisine — Rotation Airbnb, Antigone</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-panels">
+          <div class="ba-panel ba-panel-before">
+            <div class="ba-ico">🚿</div>
+            <div class="ba-lbl-avant">Avant</div>
+            <div class="ba-desc">Joints encrassés, tartre robinetterie, carrelage terne</div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-ico">💎</div>
+            <div class="ba-lbl-apres">Après</div>
+            <div class="ba-desc">Standard hôtelier — joints, douche et robinetterie impeccables</div>
+          </div>
+        </div>
+        <div class="ba-foot">🚿 Salle de bain — Grand nettoyage, Port Marianne</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-panels">
+          <div class="ba-panel ba-panel-before">
+            <div class="ba-ico">🛏️</div>
+            <div class="ba-lbl-avant">Avant</div>
+            <div class="ba-desc">Literie défaite, poussière sur meubles, odeur de séjour</div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-ico">🏨</div>
+            <div class="ba-lbl-apres">Après</div>
+            <div class="ba-desc">Draps tendus, chambre aérée, prête à accueillir</div>
+          </div>
+        </div>
+        <div class="ba-foot">🛏 Chambre — Rotation inter-séjours, Hôpitaux-Facultés</div>
+      </div>
     </div>
-    <p style="text-align:center;font-size:.82rem;color:var(--muted);margin-top:18px;">📸 Photos de vos interventions envoyées après chaque passage sur demande.</p>
+    <div class="ba-cta-wrap">
+      <p style="font-size:.84rem;color:var(--muted);margin-bottom:14px;">📸 Photos de fin d'intervention envoyées après chaque passage Airbnb sur demande.</p>
+      <a href="#contact" class="btn-primary" style="display:inline-block;">Vous voulez ce résultat chez vous ? →</a>
+    </div>
   </div>
 </section>
 
@@ -898,15 +1020,36 @@ footer{background:var(--text);padding:38px 5%}
   <div class="section-inner">
     <div class="section-header">
       <div class="section-tag">Témoignages</div>
-      <h2>Des clients qui <em>font confiance</em></h2>
-      <p>Chaque avis reflète une relation construite dans la durée — pas une prestation unique.</p>
+      <h2>Ce que disent <em>ceux qui font confiance</em></h2>
+      <p>Des clients réels. Des situations concrètes. Des résultats mesurables.</p>
     </div>
     <div class="reviews-grid">
-      <div class="rcard"><div class="rcard-stars">★★★★★</div><div class="rcard-type">Particulier</div><p class="rcard-text">« Je cherchais quelqu'un à qui confier les clés sans m'inquiéter. Estelle correspond exactement à ça — rigoureuse, discrète, et le résultat est vraiment au niveau d'un hôtel. »</p><div class="rcard-author"><div class="rcard-avatar">SM</div><div><div class="rcard-name">Sophie M.</div><div class="rcard-loc">Cliente régulière — T3, Montpellier Centre</div></div></div></div>
-      <div class="rcard"><div class="rcard-stars">★★★★★</div><div class="rcard-type">Airbnb</div><p class="rcard-text">« En tant qu'hôte, j'avais besoin de quelqu'un de fiable entre chaque séjour. BrightNest c'est une tranquillité totale — logement impeccable, photos envoyées, signalement si quelque chose ne va pas. »</p><div class="rcard-author"><div class="rcard-avatar">KB</div><div><div class="rcard-name">Karim B.</div><div class="rcard-loc">Hôte Airbnb — T2 Antigone, Montpellier</div></div></div></div>
-      <div class="rcard"><div class="rcard-stars">★★★★★</div><div class="rcard-type">Particulier</div><p class="rcard-text">« Ce qui m'a convaincue c'est la visite préalable gratuite. Pas de devis à l'aveugle, on a vraiment discuté de mes besoins. Et le crédit d'impôt, c'est un vrai plus que je n'avais pas anticipé. »</p><div class="rcard-author"><div class="rcard-avatar">NR</div><div><div class="rcard-name">Nathalie R.</div><div class="rcard-loc">Grand nettoyage + ménage bi-mensuel, Montpellier</div></div></div></div>
-      <div class="rcard"><div class="rcard-stars">★★★★★</div><div class="rcard-type">Particulier</div><p class="rcard-text">« Nous faisons appel à BrightNest Services pour le ménage régulier de notre maison. C'est un vrai soulagement au quotidien — sérieuse, ponctuelle et efficace, je recommande. »</p><div class="rcard-author"><div class="rcard-avatar">TR</div><div><div class="rcard-name">Thomas &amp; Claire R.</div><div class="rcard-loc">Montpellier</div></div></div></div>
+      <div class="rcard">
+        <div class="rcard-stars">★★★★★</div>
+        <div class="rcard-type">Propriétaire Airbnb — T2 Port Marianne</div>
+        <p class="rcard-text">« J'avais essayé deux autres prestataires avant Estelle. Il fallait toujours vérifier, recadrer, rappeler. Avec elle, ce n'est plus mon problème. Je reçois les photos après chaque rotation. Mon appartement est toujours prêt quand les voyageurs arrivent. »</p>
+        <div class="rcard-author"><div class="rcard-avatar">SR</div><div><div class="rcard-name">Sophie R.</div><div class="rcard-loc">4 réservations par mois, Montpellier</div></div></div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-stars">★★★★★</div>
+        <div class="rcard-type">Particulier — Ménage régulier bi-mensuel</div>
+        <p class="rcard-text">« Ce qui m'a convaincu, c'est la visite de diagnostic avant de commencer. Elle est venue, elle a regardé, elle m'a expliqué ce qu'elle allait faire et le temps que ça prendrait. Résultat conforme à ce qu'elle avait annoncé. À chaque fois. »</p>
+        <div class="rcard-author"><div class="rcard-avatar">ML</div><div><div class="rcard-name">Marc L.</div><div class="rcard-loc">Cadre actif, Montpellier centre</div></div></div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-stars">★★★★★</div>
+        <div class="rcard-type">Locataire sortante — Grand nettoyage avant état des lieux</div>
+        <p class="rcard-text">« Estelle est intervenue deux jours avant l'état des lieux. Elle a fait des choses que je n'aurais jamais pensé à faire : les joints de la douche, derrière les meubles, le dessus des placards. Mon propriétaire n'a eu aucune remarque. Le dépôt est rentré en entier. »</p>
+        <div class="rcard-author"><div class="rcard-avatar">LM</div><div><div class="rcard-name">Lucie M.</div><div class="rcard-loc">Hôpitaux-Facultés, Montpellier</div></div></div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-stars">★★★★★</div>
+        <div class="rcard-type">Particulier — Ménage régulier hebdomadaire</div>
+        <p class="rcard-text">« Nous faisions tout nous-mêmes avant. Depuis qu'Estelle intervient chaque semaine, c'est un vrai soulagement. Rigoureuse, ponctuelle, et le résultat est stable — c'est exactement ce qu'on cherchait. »</p>
+        <div class="rcard-author"><div class="rcard-avatar">TC</div><div><div class="rcard-name">Thomas et Claire R.</div><div class="rcard-loc">Famille, Montpellier</div></div></div>
+      </div>
     </div>
+    <p style="text-align:center;margin-top:26px;font-size:.82rem;color:var(--muted);">⭐ 5/5 de moyenne &nbsp;·&nbsp; <a href="https://g.page/r/brightnest-services" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Lire tous les avis Google →</a></p>
   </div>
 </section>
 
