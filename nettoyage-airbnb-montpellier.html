@@ -294,6 +294,25 @@ footer{background:var(--text);padding:38px 5%}
 .autre-card p{font-size:.83rem;color:var(--muted);line-height:1.65;flex:1}
 .autre-card-link{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:.83rem;font-weight:600;margin-top:4px;transition:gap .15s}
 .autre-card:hover .autre-card-link{gap:10px}
+
+/* ── AVANT / APRÈS — photos réelles ── */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ba-card{border-radius:14px;overflow:hidden;background:var(--white);border:1px solid var(--cream-dark);box-shadow:0 2px 16px rgba(27,107,90,.07);transition:box-shadow .25s ease,transform .25s ease;display:flex;flex-direction:column}
+.ba-card:hover{box-shadow:0 8px 32px rgba(27,107,90,.13);transform:translateY(-2px)}
+.ba-card.wide{grid-column:1/-1}
+.ba-img-wrap{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:#e8e4dc}
+.ba-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.ba-labels{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 12px;pointer-events:none}
+.ba-label{font-family:'DM Sans',Arial,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:50px;backdrop-filter:blur(4px)}
+.ba-label.avant{background:rgba(28,40,38,.72);color:#fff}
+.ba-label.apres{background:rgba(27,107,90,.88);color:#fff}
+.ba-info{padding:14px 18px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ba-title{font-family:'DM Sans',Arial,sans-serif;font-size:.82rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.06em}
+.ba-meta{font-family:'DM Sans',Arial,sans-serif;font-size:.78rem;color:var(--muted);line-height:1.55}
+.ba-tag{display:inline-block;background:var(--green-pale);color:var(--green);font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:50px;margin-top:2px;width:fit-content}
+.ba-cta-wrap{text-align:center;margin-top:40px}
+.ba-proof-note{font-size:.8rem;color:var(--muted);margin-bottom:18px;font-style:italic}
+@media(max-width:720px){.ba-grid{grid-template-columns:1fr}.ba-card.wide{grid-column:1}}
 </style>
 </head>
 <body>
@@ -568,6 +587,57 @@ footer{background:var(--text);padding:38px 5%}
       <div class="process-step"><div class="step-num">2</div><h4>Visite du logement</h4><p>Je me déplace pour voir le bien et établir un devis précis, sans engagement.</p></div>
       <div class="process-step"><div class="step-num">3</div><h4>Mise en place</h4><p>Je m'adapte à votre calendrier Airbnb. Chaque check-out déclenche mon intervention.</p></div>
       <div class="process-step"><div class="step-num">4</div><h4>Suivi & photos</h4><p>Après chaque passage, vous recevez une confirmation et les photos si vous le souhaitez.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- AVANT / APRÈS -->
+<section class="section" id="avant-apres">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Résultats réels</div>
+      <h2>Ce que voient vos <em>voyageurs</em></h2>
+      <p>Standard hôtelier appliqué à chaque rotation — voici ce que ça donne.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card wide">
+        <div class="ba-img-wrap" style="aspect-ratio:16/6;">
+          <img src="/nettoyage-chambre-airbnb-montpellier-avant-apres.webp" alt="Remise en état chambre Airbnb Montpellier avant après — BrightNest Services" width="1200" height="960" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Chambre entre deux séjours</div>
+          <div class="ba-meta">Lit refait au standard hôtelier, linge changé, coussins repositionnés — prêt à accueillir le prochain voyageur.</div>
+          <span class="ba-tag">Rotation inter-séjours Airbnb</span>
+        </div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-siphon-detail-montpellier-avant-apres.webp" alt="Nettoyage siphon évacuation Airbnb Montpellier avant après — BrightNest Services" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Siphons et évacuations</div>
+          <div class="ba-meta">Le détail que vos voyageurs ne voient pas — mais qui fait la différence sur leur avis propreté.</div>
+          <span class="ba-tag">Protocole hôtelier BrightNest</span>
+        </div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-vitre-douche-montpellier-avant-apres.webp" alt="Nettoyage vitre douche Airbnb Montpellier avant après — BrightNest Services" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Salle de bain / douche</div>
+          <div class="ba-meta">Vitres désincrustées, joints nettoyés — la salle de bain, premier critère de notation Airbnb.</div>
+          <span class="ba-tag">Rotation inter-séjours</span>
+        </div>
+      </div>
+    </div>
+    <div class="ba-cta-wrap">
+      <p class="ba-proof-note">📸 Photos envoyées après chaque passage — votre logement sous contrôle, à distance.</p>
+      <a href="#contact" class="btn btn-primary">Discuter de ma rotation sur WhatsApp →</a>
     </div>
   </div>
 </section>

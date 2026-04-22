@@ -261,6 +261,25 @@ footer{background:var(--text);padding:38px 5%}
   .wa-float span{display:none}
   .wa-float{padding:14px;border-radius:50%;bottom:20px;right:20px}
 }
+
+/* ── AVANT / APRÈS — photos réelles ── */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ba-card{border-radius:14px;overflow:hidden;background:var(--white);border:1px solid var(--cream-dark);box-shadow:0 2px 16px rgba(27,107,90,.07);transition:box-shadow .25s ease,transform .25s ease;display:flex;flex-direction:column}
+.ba-card:hover{box-shadow:0 8px 32px rgba(27,107,90,.13);transform:translateY(-2px)}
+.ba-card.wide{grid-column:1/-1}
+.ba-img-wrap{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:#e8e4dc}
+.ba-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.ba-labels{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 12px;pointer-events:none}
+.ba-label{font-family:'DM Sans',Arial,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:50px;backdrop-filter:blur(4px)}
+.ba-label.avant{background:rgba(28,40,38,.72);color:#fff}
+.ba-label.apres{background:rgba(27,107,90,.88);color:#fff}
+.ba-info{padding:14px 18px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ba-title{font-family:'DM Sans',Arial,sans-serif;font-size:.82rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.06em}
+.ba-meta{font-family:'DM Sans',Arial,sans-serif;font-size:.78rem;color:var(--muted);line-height:1.55}
+.ba-tag{display:inline-block;background:var(--green-pale);color:var(--green);font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:50px;margin-top:2px;width:fit-content}
+.ba-cta-wrap{text-align:center;margin-top:40px}
+.ba-proof-note{font-size:.8rem;color:var(--muted);margin-bottom:18px;font-style:italic}
+@media(max-width:720px){.ba-grid{grid-template-columns:1fr}.ba-card.wide{grid-column:1}}
 </style>
 </head>
 <body>
@@ -477,6 +496,56 @@ footer{background:var(--text);padding:38px 5%}
           <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block;">Demander un devis</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- AVANT / APRÈS -->
+<section class="section" id="avant-apres">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Résultats réels</div>
+      <h2>Le résultat <em>parle de lui-même</em></h2>
+      <p>Ce que vous voyez ci-dessous, c'est le standard BrightNest appliqué à chaque ménage — pas une exception.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-vitre-douche-montpellier-avant-apres.webp" alt="Nettoyage vitre douche calcaire Montpellier avant après — BrightNest Services" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Vitre de douche encrassée</div>
+          <div class="ba-meta">Calcaire, dépôts de savon, traces d'eau — résultat impeccable sans rayer le verre.</div>
+          <span class="ba-tag">Ménage en profondeur</span>
+        </div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-siphon-detail-montpellier-avant-apres.webp" alt="Nettoyage siphon évacuation Montpellier avant après — BrightNest Services" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Siphons et évacuations</div>
+          <div class="ba-meta">Le détail que personne ne voit — mais que je contrôle à chaque intervention. Standard gouvernante d'hôtel.</div>
+          <span class="ba-tag">Protocole hôtelier</span>
+        </div>
+      </div>
+      <div class="ba-card wide">
+        <div class="ba-img-wrap" style="aspect-ratio:16/5;">
+          <img src="/nettoyage-fond-placard-cuisine-montpellier-avant-apres.webp" alt="Nettoyage fond placard cuisine Montpellier avant après — BrightNest Services" width="1200" height="798" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Fond de placard cuisine</div>
+          <div class="ba-meta">Résidus alimentaires, dépôts anciens — chaque recoin nettoyé comme si c'était le premier jour.</div>
+          <span class="ba-tag">Grand ménage / état des lieux</span>
+        </div>
+      </div>
+    </div>
+    <div class="ba-cta-wrap">
+      <a href="#contact" class="btn btn-primary">Demander mon devis gratuit →</a>
     </div>
   </div>
 </section>

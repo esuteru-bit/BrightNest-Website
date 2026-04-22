@@ -288,13 +288,7 @@ img{max-width:100%;display:block}
 /* ── AVANT/APRÈS ── */
 .ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .ba-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.ba-panels{display:grid;grid-template-columns:1fr 1fr}
-.ba-panel{padding:26px 16px;text-align:center;border-right:1px solid var(--cream-dark)}
-.ba-panel:last-child{border-right:none}
-.ba-ico{font-size:2rem;margin-bottom:8px}
-.ba-lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;font-weight:600;color:var(--muted);margin-bottom:3px}
-.ba-desc{font-size:.78rem;color:var(--muted)}
-.ba-foot{padding:9px 14px;border-top:1px solid var(--cream-dark);font-size:.76rem;color:var(--green);font-weight:600;text-align:center}
+
 
 /* ── AVIS ── */
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -383,6 +377,24 @@ footer{background:var(--text);padding:38px 5%}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
+/* ── AVANT / APRÈS — photos réelles ── */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ba-card{border-radius:14px;overflow:hidden;background:var(--white);border:1px solid var(--cream-dark);box-shadow:0 2px 16px rgba(27,107,90,.07);transition:box-shadow .25s ease,transform .25s ease;display:flex;flex-direction:column}
+.ba-card:hover{box-shadow:0 8px 32px rgba(27,107,90,.13);transform:translateY(-2px)}
+.ba-card.wide{grid-column:1/-1}
+.ba-img-wrap{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:#e8e4dc}
+.ba-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.ba-labels{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 12px;pointer-events:none}
+.ba-label{font-family:'DM Sans',Arial,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:50px;backdrop-filter:blur(4px)}
+.ba-label.avant{background:rgba(28,40,38,.72);color:#fff}
+.ba-label.apres{background:rgba(27,107,90,.88);color:#fff}
+.ba-info{padding:14px 18px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ba-title{font-family:'DM Sans',Arial,sans-serif;font-size:.82rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.06em}
+.ba-meta{font-family:'DM Sans',Arial,sans-serif;font-size:.78rem;color:var(--muted);line-height:1.55}
+.ba-tag{display:inline-block;background:var(--green-pale);color:var(--green);font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:50px;margin-top:2px;width:fit-content}
+.ba-cta-wrap{text-align:center;margin-top:44px}
+.ba-proof-note{font-size:.8rem;color:var(--muted);margin-bottom:18px;font-style:italic}
+
 /* ── POURQUOI ME CHOISIR ── */
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .why-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
@@ -410,6 +422,7 @@ footer{background:var(--text);padding:38px 5%}
   .nav-links{display:none}.hamburger{display:flex}
   .tax-grid,.contact-grid{grid-template-columns:1fr}
   .ba-grid{grid-template-columns:1fr}
+  .ba-card.wide{grid-column:1}
   .form-row{grid-template-columns:1fr}
   .process-grid{grid-template-columns:repeat(2,1fr)}
   .hero-stats{max-width:100%}
@@ -896,16 +909,82 @@ footer{background:var(--text);padding:38px 5%}
 <section class="section section-white" id="avant-apres">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-tag">Résultats</div>
+      <div class="section-tag">Résultats réels</div>
       <h2>Le résultat <em>parle de lui-même</em></h2>
       <p>Chaque intervention suit un protocole précis. Ce que vous voyez ci-dessous, c'est le standard BrightNest — pas une exception.</p>
     </div>
     <div class="ba-grid">
-      <div class="ba-card"><div class="ba-panels"><div class="ba-panel"><div class="ba-ico">🍳</div><div class="ba-lbl">Avant</div><div class="ba-desc">Cuisine après séjour</div></div><div class="ba-panel"><div class="ba-ico">✨</div><div class="ba-lbl">Après</div><div class="ba-desc">Plans désinfectés</div></div></div><div class="ba-foot">Cuisine / Remise en état Airbnb</div></div>
-      <div class="ba-card"><div class="ba-panels"><div class="ba-panel"><div class="ba-ico">🚿</div><div class="ba-lbl">Avant</div><div class="ba-desc">Salle de bain utilisée</div></div><div class="ba-panel"><div class="ba-ico">💎</div><div class="ba-lbl">Après</div><div class="ba-desc">Standard hôtelier</div></div></div><div class="ba-foot">Salle de bain / Grand nettoyage</div></div>
-      <div class="ba-card"><div class="ba-panels"><div class="ba-panel"><div class="ba-ico">🛏️</div><div class="ba-lbl">Avant</div><div class="ba-desc">Entre deux voyageurs</div></div><div class="ba-panel"><div class="ba-ico">🏨</div><div class="ba-lbl">Après</div><div class="ba-desc">Prêt à accueillir</div></div></div><div class="ba-foot">Chambre / Pack Sérénité Airbnb</div></div>
+
+      <!-- Vitre douche -->
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-vitre-douche-montpellier-avant-apres.webp" alt="Nettoyage vitre douche Montpellier avant après — BrightNest Services" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Vitre de douche encrassée</div>
+          <div class="ba-meta">Calcaire, dépôts de savon, traces d'eau — résultat impeccable sans rayer le verre.</div>
+          <span class="ba-tag">Grand nettoyage ponctuel</span>
+        </div>
+      </div>
+
+      <!-- Four -->
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-four-montpellier-avant-apres.webp" alt="Nettoyage four Montpellier avant après — BrightNest Services" width="1200" height="790" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Four à pyrolyse brûlé</div>
+          <div class="ba-meta">Graisses carbonisées, projections incrustées — intérieur désinfecté et prêt à l'usage.</div>
+          <span class="ba-tag">Grand nettoyage / remise en état</span>
+        </div>
+      </div>
+
+      <!-- Siphon -->
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-siphon-detail-montpellier-avant-apres.webp" alt="Nettoyage siphon évacuation Montpellier avant après — BrightNest Services" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Siphons et évacuations</div>
+          <div class="ba-meta">Le détail que personne ne voit — mais que je contrôle systématiquement. Standard gouvernante d'hôtel.</div>
+          <span class="ba-tag">Protocole hôtelier BrightNest</span>
+        </div>
+      </div>
+
+      <!-- Placard cuisine -->
+      <div class="ba-card">
+        <div class="ba-img-wrap">
+          <img src="/nettoyage-fond-placard-cuisine-montpellier-avant-apres.webp" alt="Nettoyage fond placard cuisine Montpellier avant après — BrightNest Services" width="1200" height="798" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Fond de placard cuisine</div>
+          <div class="ba-meta">Résidus alimentaires, dépôts anciens — chaque recoin nettoyé comme si c'était le premier jour.</div>
+          <span class="ba-tag">Grand nettoyage / état des lieux</span>
+        </div>
+      </div>
+
+      <!-- Chambre Airbnb — pleine largeur -->
+      <div class="ba-card wide">
+        <div class="ba-img-wrap" style="aspect-ratio:16/6;">
+          <img src="/nettoyage-chambre-airbnb-montpellier-avant-apres.webp" alt="Remise en état chambre Airbnb Montpellier avant après — BrightNest Services" width="1200" height="960" loading="lazy" decoding="async">
+          <div class="ba-labels"><span class="ba-label avant">Avant</span><span class="ba-label apres">Après</span></div>
+        </div>
+        <div class="ba-info">
+          <div class="ba-title">Chambre entre deux séjours</div>
+          <div class="ba-meta">Lit refait au standard hôtelier, linge changé, coussins repositionnés — prêt à accueillir le prochain voyageur.</div>
+          <span class="ba-tag">Rotation inter-séjours Airbnb</span>
+        </div>
+      </div>
+
     </div>
-    <p style="text-align:center;font-size:.82rem;color:var(--muted);margin-top:18px;">📸 Photos de vos interventions envoyées après chaque passage sur demande.</p>
+    <div class="ba-cta-wrap">
+      <p class="ba-proof-note">📸 Photos envoyées après chaque intervention Airbnb — votre logement sous contrôle, à distance.</p>
+      <a href="#contact" class="btn btn-primary">Demander mon devis gratuit →</a>
+    </div>
   </div>
 </section>
 
