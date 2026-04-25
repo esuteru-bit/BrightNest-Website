@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1B6B5A">
 <title>Nettoyage après déménagement Montpellier | BrightNest</title>
 <meta name="description" content="Grand nettoyage ponctuel à Montpellier : déménagement, après travaux, remise en état. Forfaits dès 120 €. Crédit d'impôt 50%. Devis gratuit.">
 <meta name="robots" content="index, follow">
@@ -23,19 +24,48 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Ménage ponctuel Montpellier",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "BrightNest Services",
-    "telephone": "+33758446510",
-    "url": "https://brightnestservices.fr",
-    "identifier": "SAP951623024",
-    "address": {"@type": "PostalAddress","addressLocality": "Montpellier","addressRegion": "Hérault","postalCode": "34000","addressCountry": "FR"}
-  },
-  "description": "Grand nettoyage ponctuel à Montpellier. Remise en état complète pour déménagement, avant état des lieux, après travaux ou nettoyage de printemps.",
-  "areaServed": "Montpellier",
-  "priceRange": "120€ – 250€ (forfait selon superficie)"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://brightnestservices.fr/#business",
+      "name": "BrightNest Services",
+      "telephone": "+33758446510",
+      "email": "contact@brightnestservices.fr",
+      "url": "https://brightnestservices.fr",
+      "identifier": "SAP951623024",
+      "address": {"@type": "PostalAddress","addressLocality": "Montpellier","addressRegion": "Hérault","postalCode": "34000","addressCountry": "FR"},
+      "geo": {"@type": "GeoCoordinates","latitude": "43.6119","longitude": "3.8772"},
+      "priceRange": "€€",
+      "openingHours": "Mo-Sa 08:00-19:00"
+    },
+    {
+      "@type": "Service",
+      "name": "Ménage ponctuel Montpellier",
+      "serviceType": "Grand nettoyage ponctuel",
+      "provider": {"@id": "https://brightnestservices.fr/#business"},
+      "description": "Grand nettoyage ponctuel à Montpellier. Remise en état complète pour déménagement, avant état des lieux, après travaux ou nettoyage de printemps.",
+      "areaServed": "Montpellier",
+      "priceRange": "120€ – 250€ (forfait selon superficie)"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Accueil","item": "https://brightnestservices.fr/"},
+        {"@type": "ListItem","position": 2,"name": "Ménage ponctuel Montpellier","item": "https://brightnestservices.fr/menage-ponctuel-montpellier.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "Combien de temps dure un grand nettoyage ?","acceptedAnswer": {"@type": "Answer","text": "Ça dépend de la superficie et de l'état du logement. En moyenne : 3 à 4h pour un studio, 5 à 7h pour un T2/T3. Je préfère prendre le temps qu'il faut pour faire les choses correctement, sans bâcler. La durée précise est estimée lors de la visite ou de notre échange."}},
+        {"@type": "Question","name": "Dois-je être présent(e) pendant l'intervention ?","acceptedAnswer": {"@type": "Answer","text": "Vous pouvez être présent(e) ou me confier les clés. Pour les déménagements ou les logements vides, beaucoup de clients me laissent les clés et passent à la fin pour vérifier. C'est à vous de choisir ce qui vous convient."}},
+        {"@type": "Question","name": "Le crédit d'impôt s'applique-t-il aussi au grand nettoyage ponctuel ?","acceptedAnswer": {"@type": "Answer","text": "Oui. Toutes mes prestations réalisées dans une résidence principale ou secondaire (à titre personnel) sont éligibles au crédit d'impôt de 50%, y compris les interventions ponctuelles. Je vous fournis l'attestation fiscale automatiquement."}},
+        {"@type": "Question","name": "Le tarif peut-il changer après la visite ?","acceptedAnswer": {"@type": "Answer","text": "Le devis est établi après visite ou après échange détaillé sur l'état du logement. En cas d'encrassement très important non signalé, une majoration peut s'appliquer — mais seulement après vous en avoir informé et obtenu votre accord."}},
+        {"@type": "Question","name": "Puis-je ensuite passer sur un ménage régulier ?","acceptedAnswer": {"@type": "Answer","text": "Absolument. Beaucoup de clients démarrent par un grand nettoyage ponctuel puis mettent en place un ménage régulier pour maintenir le résultat. C'est même la façon la plus efficace de procéder."}},
+        {"@type": "Question","name": "Quel délai pour obtenir un rendez-vous ?","acceptedAnswer": {"@type": "Answer","text": "Je réponds sous 24h à toutes les demandes. Les créneaux disponibles varient selon la période — contactez-moi le plus tôt possible si vous avez une date impérative (état des lieux notamment)."}}
+      ]
+    }
+  ]
 }
 </script>
 <!-- Google Analytics 4 — remplacer G-F28Q9KXGM9 par votre Measurement ID -->
@@ -336,8 +366,9 @@ footer{background:var(--text);padding:38px 5%}
     <p class="hero-sub">Déménagement, état des lieux, après travaux ou nettoyage de printemps. Un grand nettoyage en profondeur, sans engagement.</p>
     <p class="hero-body">Pas toujours besoin d'un ménage régulier. Parfois on a besoin d'une intervention ponctuelle, complète et rigoureuse. Je me charge de tout remettre à zéro — pièce par pièce, surface par surface — avec le soin d'une gouvernante d'hôtel.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
+      <a href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20un%20grand%20nettoyage%20ponctuel%20%C3%A0%20Montpellier." target="_blank" rel="noopener" class="btn-primary">💬 Demander un devis par WhatsApp</a>
       <a href="#tarifs" class="btn-outline">Voir les forfaits</a>
+      <a href="#contact" class="btn-outline">Formulaire détaillé</a>
     </div>
     <p class="hero-reassure">Forfait fixe selon superficie · 50% crédit d'impôt · Agréée SAP</p>
     <div class="hero-stats">
@@ -381,7 +412,7 @@ footer{background:var(--text);padding:38px 5%}
       <div class="usecase-card">
         <div class="usecase-ico">🔨</div>
         <h4>Après travaux</h4>
-        <p>Poussière, plâtre, traces — je remet le logement en état après une rénovation ou des travaux.</p>
+        <p>Poussière, plâtre, traces — je remets le logement en état après une rénovation ou des travaux.</p>
       </div>
       <div class="usecase-card">
         <div class="usecase-ico">🌸</div>
@@ -793,5 +824,38 @@ function toggleFaq(el) {
 </footer>
 
 <!-- WHATSAPP -->
-<a class="wa-float" href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20un%20grand%20nettoyage%20ponctuel%20à%20Montpellier." target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82
+<a class="wa-float" href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20un%20grand%20nettoyage%20ponctuel%20%C3%A0%20Montpellier." target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.524A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.214-3.726.896.912-3.631-.234-.373A9.818 9.818 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+document.addEventListener('click', function(e){
+  var link = e.target.closest('a');
+  if(!link) return;
+  var href = link.getAttribute('href') || '';
+  var onclickAttr = link.getAttribute('onclick') || '';
+  if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_whatsapp', {
+        event_category: 'contact',
+        event_label: link.getAttribute('aria-label') || 'whatsapp_link',
+        page_path: window.location.pathname
+      });
+    }
+  }
+  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_calendly', {
+        event_category: 'contact',
+        event_label: 'calendly_reserve',
+        page_path: window.location.pathname
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>

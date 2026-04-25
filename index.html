@@ -98,9 +98,8 @@
 </script>
 <!-- Calendly popup -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -1207,6 +1206,32 @@ document.addEventListener('click',function(e){
 });
 document.querySelectorAll('.mobile-nav a:not([onclick])').forEach(function(a){
   a.addEventListener('click', closeMenu);
+});
+
+// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+document.addEventListener('click', function(e){
+  var link = e.target.closest('a');
+  if(!link) return;
+  var href = link.getAttribute('href') || '';
+  var onclickAttr = link.getAttribute('onclick') || '';
+  if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_whatsapp', {
+        event_category: 'contact',
+        event_label: link.getAttribute('aria-label') || 'whatsapp_link',
+        page_path: window.location.pathname
+      });
+    }
+  }
+  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_calendly', {
+        event_category: 'contact',
+        event_label: 'calendly_reserve',
+        page_path: window.location.pathname
+      });
+    }
+  }
 });
 </script>
 </body>

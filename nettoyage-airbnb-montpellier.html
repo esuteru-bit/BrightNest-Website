@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1B6B5A">
 <title>Ménage inter-locations Montpellier | BrightNest Services</title>
 <meta name="description" content="Ménage inter-locations à Montpellier entre deux réservations Airbnb. Standard hôtelier, photos après chaque passage. Forfaits fixes dès 60 €. Devis gratuit.">
 <meta name="robots" content="index, follow">
@@ -23,18 +24,49 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Nettoyage Airbnb Montpellier",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "BrightNest Services",
-    "telephone": "+33758446510",
-    "url": "https://brightnestservices.fr",
-    "address": {"@type": "PostalAddress","addressLocality": "Montpellier","addressRegion": "Hérault","postalCode": "34000","addressCountry": "FR"}
-  },
-  "description": "Nettoyage professionnel entre chaque réservation Airbnb à Montpellier. Changement de linge, désinfection, photos envoyées au propriétaire.",
-  "areaServed": "Montpellier",
-  "priceRange": "60€ – 130€"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://brightnestservices.fr/#business",
+      "name": "BrightNest Services",
+      "telephone": "+33758446510",
+      "email": "contact@brightnestservices.fr",
+      "url": "https://brightnestservices.fr",
+      "identifier": "SAP951623024",
+      "address": {"@type": "PostalAddress","addressLocality": "Montpellier","addressRegion": "Hérault","postalCode": "34000","addressCountry": "FR"},
+      "geo": {"@type": "GeoCoordinates","latitude": "43.6119","longitude": "3.8772"},
+      "priceRange": "€€",
+      "openingHours": "Mo-Sa 08:00-19:00"
+    },
+    {
+      "@type": "Service",
+      "name": "Nettoyage Airbnb Montpellier",
+      "serviceType": "Ménage inter-locations pour hôtes Airbnb et conciergeries",
+      "provider": {"@id": "https://brightnestservices.fr/#business"},
+      "description": "Nettoyage professionnel entre chaque réservation Airbnb à Montpellier. Changement de linge, désinfection, photos envoyées au propriétaire.",
+      "areaServed": "Montpellier",
+      "audience": {"@type": "BusinessAudience","audienceType": "Hôtes Airbnb et conciergeries"},
+      "priceRange": "60€ – 130€"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Accueil","item": "https://brightnestservices.fr/"},
+        {"@type": "ListItem","position": 2,"name": "Nettoyage Airbnb Montpellier","item": "https://brightnestservices.fr/nettoyage-airbnb-montpellier.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "Comment se passe la première mise en place ?","acceptedAnswer": {"@type": "Answer","text": "Je visite votre logement pour en prendre connaissance, noter les spécificités et établir un forfait définitif. On convient ensuite d'un mode opératoire : accès aux clés, check-list personnalisée, contact WhatsApp direct pour les confirmations."}},
+        {"@type": "Question","name": "Comment gérez-vous les check-out et check-in rapprochés ?","acceptedAnswer": {"@type": "Answer","text": "J'essaie de planifier les interventions dès que possible après le départ du voyageur. Idéalement, j'ai besoin d'un minimum de 2h entre le départ et l'arrivée suivante. En cas de contrainte horaire particulière, on en discute lors de la mise en place."}},
+        {"@type": "Question","name": "Qui fournit les draps et serviettes ?","acceptedAnswer": {"@type": "Answer","text": "C'est vous qui fournissez le linge (draps, serviettes, torchons). Je m'occupe de retirer le linge sale et de mettre en place le linge propre. Si vous avez besoin d'un service de blanchisserie, je peux vous orienter vers des partenaires locaux."}},
+        {"@type": "Question","name": "Comment se passe l'accès au logement ?","acceptedAnswer": {"@type": "Answer","text": "Plusieurs options : boîte à clé sécurisée (recommandé), clé déposée, ou serrure connectée. On choisit ensemble la solution la plus pratique pour vous lors de la mise en place."}},
+        {"@type": "Question","name": "Que se passe-t-il si un voyageur a laissé le logement dans un état inhabituel ?","acceptedAnswer": {"@type": "Answer","text": "Je vous préviens immédiatement avec photos à l'appui. Une majoration de 50 € peut s'appliquer en cas d'encrassement important (à valider avec vous avant intervention). Cela vous permet aussi de signaler le problème à Airbnb si nécessaire."}},
+        {"@type": "Question","name": "Est-ce que le crédit d'impôt s'applique aux prestations Airbnb ?","acceptedAnswer": {"@type": "Answer","text": "Non. Le crédit d'impôt SAP de 50% s'applique uniquement aux prestations réalisées dans votre résidence principale ou secondaire à titre personnel. Pour les locations saisonnières à but locatif, ce dispositif ne s'applique pas."}}
+      ]
+    }
+  ]
 }
 </script>
 <!-- Google Analytics 4 — remplacer G-F28Q9KXGM9 par votre Measurement ID -->
@@ -359,8 +391,9 @@ footer{background:var(--text);padding:38px 5%}
     <p class="hero-sub">Un logement impeccable à chaque départ. Je gère la rotation pour vous — photos envoyées, zéro coordination à gérer.</p>
     <p class="hero-body">Votre première note 5 étoiles sur Airbnb, c'est la propreté. Je m'en occupe selon un standard hôtelier rigoureux, entre chaque séjour, selon votre calendrier de réservations.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Organiser mes rotations →</a>
+      <a href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20le%20nettoyage%20de%20mon%20Airbnb%20%C3%A0%20Montpellier." target="_blank" rel="noopener" class="btn-primary">💬 Organiser mes rotations par WhatsApp</a>
       <a href="#tarifs" class="btn-outline">Voir les tarifs</a>
+      <a href="#contact" class="btn-outline">Formulaire détaillé</a>
     </div>
     <p class="hero-reassure">Forfaits fixes sans mauvaise surprise · Photos après chaque passage · 10 ans d'expérience hôtelière</p>
     <div class="hero-stats">
@@ -773,5 +806,38 @@ function toggleFaq(el) {
 </footer>
 
 <!-- WHATSAPP -->
-<a class="wa-float" href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20le%20nettoyage%20de%20mon%20Airbnb%20à%20Montpellier." target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82
+<a class="wa-float" href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20le%20nettoyage%20de%20mon%20Airbnb%20%C3%A0%20Montpellier." target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.524A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.214-3.726.896.912-3.631-.234-.373A9.818 9.818 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+document.addEventListener('click', function(e){
+  var link = e.target.closest('a');
+  if(!link) return;
+  var href = link.getAttribute('href') || '';
+  var onclickAttr = link.getAttribute('onclick') || '';
+  if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_whatsapp', {
+        event_category: 'contact',
+        event_label: link.getAttribute('aria-label') || 'whatsapp_link',
+        page_path: window.location.pathname
+      });
+    }
+  }
+  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_calendly', {
+        event_category: 'contact',
+        event_label: 'calendly_reserve',
+        page_path: window.location.pathname
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>

@@ -24,19 +24,48 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Ménage à domicile Montpellier",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "BrightNest Services",
-    "telephone": "+33758446510",
-    "url": "https://brightnestservices.fr",
-    "identifier": "SAP951623024",
-    "address": {"@type": "PostalAddress","addressLocality": "Montpellier","addressRegion": "Hérault","postalCode": "34000","addressCountry": "FR"}
-  },
-  "description": "Ménage à domicile régulier ou ponctuel à Montpellier. Agréée SAP, crédit d'impôt 50%. Standard hôtelier, même interlocutrice à chaque fois.",
-  "areaServed": "Montpellier",
-  "priceRange": "30 €/h (15 € après crédit d'impôt)"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://brightnestservices.fr/#business",
+      "name": "BrightNest Services",
+      "telephone": "+33758446510",
+      "email": "contact@brightnestservices.fr",
+      "url": "https://brightnestservices.fr",
+      "identifier": "SAP951623024",
+      "address": {"@type": "PostalAddress","addressLocality": "Montpellier","addressRegion": "Hérault","postalCode": "34000","addressCountry": "FR"},
+      "geo": {"@type": "GeoCoordinates","latitude": "43.6119","longitude": "3.8772"},
+      "priceRange": "€€",
+      "openingHours": "Mo-Sa 08:00-19:00"
+    },
+    {
+      "@type": "Service",
+      "name": "Ménage à domicile Montpellier",
+      "serviceType": "Ménage à domicile régulier",
+      "provider": {"@id": "https://brightnestservices.fr/#business"},
+      "description": "Ménage à domicile régulier ou ponctuel à Montpellier. Agréée SAP, crédit d'impôt 50%. Standard hôtelier, même interlocutrice à chaque fois.",
+      "areaServed": "Montpellier",
+      "priceRange": "30 €/h (15 € après crédit d'impôt)"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Accueil","item": "https://brightnestservices.fr/"},
+        {"@type": "ListItem","position": 2,"name": "Ménage à domicile Montpellier","item": "https://brightnestservices.fr/nettoyage-appartement-montpellier.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "Comment se passe la première intervention ?","acceptedAnswer": {"@type": "Answer","text": "Avant tout, je me déplace gratuitement pour voir votre logement et estimer la durée réelle. Ensuite, pour les clients réguliers, je propose une première séance test sans engagement : vous voyez le résultat avant de vous décider."}},
+        {"@type": "Question","name": "Dois-je être présent(e) pendant le ménage ?","acceptedAnswer": {"@type": "Answer","text": "Non, ce n'est pas obligatoire. La plupart de mes clients me confient une clé ou une boîte à clé. Vous partez au travail, vous rentrez dans un logement propre. La confiance est au cœur de ma façon de travailler."}},
+        {"@type": "Question","name": "Dois-je fournir les produits et le matériel ?","acceptedAnswer": {"@type": "Answer","text": "J'apporte mes produits d'entretien et le petit matériel transportable. En revanche, le matériel encombrant est à votre charge : aspirateur, seau + serpillière, escabeau. Si vous avez des préférences (allergie, produits éco), on en discute lors de la visite."}},
+        {"@type": "Question","name": "Comment fonctionne le crédit d'impôt ?","acceptedAnswer": {"@type": "Answer","text": "En tant que prestataire agréée SAP (n° SAP951623024), 50% de vos dépenses vous sont remboursées via votre déclaration d'impôts — ou immédiatement via l'avance URSSAF sur net-particulier.fr. Je fournis automatiquement l'attestation fiscale annuelle en début d'année."}},
+        {"@type": "Question","name": "Quelle fréquence me recommandez-vous ?","acceptedAnswer": {"@type": "Answer","text": "Ça dépend de la superficie de votre logement, du nombre d'occupants et de votre style de vie. En moyenne : hebdomadaire pour les grandes surfaces ou les familles avec enfants, bi-mensuel pour les 2-3 pièces. On en discute lors de la visite gratuite."}},
+        {"@type": "Question","name": "Comment annuler ou modifier une intervention ?","acceptedAnswer": {"@type": "Answer","text": "Je demande un préavis de 48h. Je comprends les imprévus et on s'arrange toujours. Le plus simple est de me contacter directement par WhatsApp ou téléphone."}}
+      ]
+    }
+  ]
 }
 </script>
 <!-- Google Analytics 4 — remplacer G-F28Q9KXGM9 par votre Measurement ID -->
@@ -325,8 +354,9 @@ footer{background:var(--text);padding:38px 5%}
     <p class="hero-sub">Rentrez dans un intérieur propre, sans y avoir pensé. 30 €/h, soit 15 € réels après crédit d'impôt de 50%.</p>
     <p class="hero-body">Je m'appelle Estelle. Après 10 ans comme gouvernante d'hôtel, j'entretiens votre logement avec le même soin qu'un établissement haut de gamme — mais avec la confiance et la discrétion d'une relation directe, sans agence.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
+      <a href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20un%20m%C3%A9nage%20%C3%A0%20domicile%20%C3%A0%20Montpellier." target="_blank" rel="noopener" class="btn-primary">💬 Demander un devis par WhatsApp</a>
       <a href="#tarifs" class="btn-outline">Voir les tarifs</a>
+      <a href="#contact" class="btn-outline">Formulaire détaillé</a>
     </div>
     <p class="hero-reassure">Visite gratuite sans engagement · Toujours la même personne · Attestation fiscale annuelle fournie</p>
     <div class="hero-stats">
@@ -455,10 +485,10 @@ footer{background:var(--text);padding:38px 5%}
           </tbody>
         </table>
         <div style="background:var(--green-pale);border:1px solid rgba(27,107,90,.18);border-radius:8px;padding:14px 16px;font-size:.83rem;color:var(--green);line-height:1.65;">
-          ⚡ <strong>Avance immédiate URSSAF :</strong> En activant ce dispositif sur <a href="https://www.net-particulier.fr/je-beneficie-de-l-avance-immediate.html" target="_blank" style="font-weight:700;color:var(--green);">net-particulier.fr</a>, vous ne payez que 50% au moment de la prestation, sans attendre la déclaration d'impôts.
+          ⚡ <strong>Avance immédiate URSSAF :</strong> En activant ce dispositif sur <a href="https://www.net-particulier.fr/je-beneficie-de-l-avance-immediate.html" target="_blank" rel="noopener" style="font-weight:700;color:var(--green);">net-particulier.fr</a>, vous ne payez que 50% au moment de la prestation, sans attendre la déclaration d'impôts.
         </div>
         <div style="margin-top:18px;">
-          <a href="https://www.net-particulier.fr/je-beneficie-de-l-avance-immediate.html" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">Je veux en savoir plus</a>
+          <a href="https://www.net-particulier.fr/je-beneficie-de-l-avance-immediate.html" target="_blank" rel="noopener" class="btn-primary" style="width:100%;text-align:center;display:block;">Je veux en savoir plus</a>
         </div>
       </div>
     </div>
@@ -670,5 +700,38 @@ function toggleFaq(el) {
 </footer>
 
 <!-- WHATSAPP -->
-<a class="wa-float" href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20un%20ménage%20à%20domicile%20à%20Montpellier." target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.4
+<a class="wa-float" href="https://wa.me/33758446510?text=Bonjour%20Estelle%2C%20je%20souhaite%20un%20devis%20pour%20un%20m%C3%A9nage%20%C3%A0%20domicile%20%C3%A0%20Montpellier." target="_blank" rel="noopener" aria-label="Contacter par WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.845L0 24l6.335-1.524A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.214-3.726.896.912-3.631-.234-.373A9.818 9.818 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+document.addEventListener('click', function(e){
+  var link = e.target.closest('a');
+  if(!link) return;
+  var href = link.getAttribute('href') || '';
+  var onclickAttr = link.getAttribute('onclick') || '';
+  if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_whatsapp', {
+        event_category: 'contact',
+        event_label: link.getAttribute('aria-label') || 'whatsapp_link',
+        page_path: window.location.pathname
+      });
+    }
+  }
+  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
+    if(typeof gtag === 'function'){
+      gtag('event', 'click_calendly', {
+        event_category: 'contact',
+        event_label: 'calendly_reserve',
+        page_path: window.location.pathname
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>
