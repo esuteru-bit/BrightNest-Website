@@ -56,7 +56,7 @@
             "name": "Quel est le tarif d'un ménage à domicile à Montpellier ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "BrightNest Services facture le ménage régulier à 30 €/h. Grâce à l'agrément SAP, les particuliers bénéficient du crédit d'impôt de 50%, soit 15 €/h réels. Le forfait grand ménage ponctuel démarre à 120 € (60 € après crédit d'impôt)."
+              "text": "BrightNest Services facture le ménage régulier à 35 €/h. Grâce à l'agrément SAP, les particuliers bénéficient du crédit d'impôt de 50%, soit 17,50 €/h réels. Le forfait grand ménage ponctuel démarre à partir de 155 € (77,50 € après crédit d'impôt)."
             }
           },
           {
@@ -80,7 +80,7 @@
             "name": "Faites-vous le grand ménage ponctuel à Montpellier ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Oui. BrightNest Services intervient pour les grands ménages ponctuels : déménagement, après travaux, remise en état complète. Forfaits à partir de 120 € (60 € après crédit d'impôt pour les particuliers). Devis gratuit sur simple demande."
+              "text": "Oui. BrightNest Services intervient pour les grands ménages ponctuels : déménagement, après travaux, remise en état complète. Forfaits à partir de 155 € (77,50 € après crédit d'impôt pour les particuliers). Devis gratuit sur simple demande."
             }
           }
         ]
@@ -651,7 +651,7 @@ footer{background:var(--text);padding:38px 5%}
       <div class="scard">
         <div class="scard-top s1">
           🏠
-          <div class="price-badge">30 €/h → 15 € réels</div>
+          <div class="price-badge">35 €/h → 17,50 € réels</div>
         </div>
         <div class="scard-body">
           <div class="scard-badges"><span class="badge badge-green">🔁 Régulier</span><span class="badge badge-amber">💶 50% crédit d'impôt</span></div>
@@ -660,10 +660,10 @@ footer{background:var(--text);padding:38px 5%}
 
           <div class="price-block">
             <div class="price-main">
-              <span class="price-amount">30 €</span>
+              <span class="price-amount">35 €</span>
               <span class="price-unit">/ heure</span>
             </div>
-            <div class="price-after">Exemple : 15 € / heure après crédit d'impôt de 50%</div>
+            <div class="price-after">Exemple : 17,50 € / heure après crédit d'impôt de 50%</div>
           </div>
 
           <div class="zone-title">🏠 Dans tout le domicile</div>
@@ -715,18 +715,21 @@ footer{background:var(--text);padding:38px 5%}
             <div class="price-grid" style="grid-template-columns:repeat(4,1fr)">
               <div class="price-item">
                 <div class="price-item-label">Studio / T1</div>
-                <div class="price-item-val">120 €</div>
-                <div class="price-item-after">→ 60 €</div>
+                <div style="font-size:.65rem;color:var(--muted);">à partir de</div>
+                <div class="price-item-val">155 €</div>
+                <div class="price-item-after">→ 77,50 €</div>
               </div>
               <div class="price-item">
                 <div class="price-item-label">T2</div>
-                <div class="price-item-val">150 €</div>
-                <div class="price-item-after">→ 75 €</div>
+                <div style="font-size:.65rem;color:var(--muted);">à partir de</div>
+                <div class="price-item-val">190 €</div>
+                <div class="price-item-after">→ 95 €</div>
               </div>
               <div class="price-item">
                 <div class="price-item-label">T3</div>
-                <div class="price-item-val">180 €</div>
-                <div class="price-item-after">→ 90 €</div>
+                <div style="font-size:.65rem;color:var(--muted);">à partir de</div>
+                <div class="price-item-val">230 €</div>
+                <div class="price-item-after">→ 115 €</div>
               </div>
               <div class="price-item">
                 <div class="price-item-label">T4</div>
@@ -891,10 +894,10 @@ footer{background:var(--text);padding:38px 5%}
           <table class="tax-table">
             <thead><tr><th>Prestation</th><th>Prix facturé</th><th>Crédit d'impôt</th><th>Vous payez</th></tr></thead>
             <tbody>
-              <tr><td>Ménage 2h (régulier)</td><td>60 €</td><td>30 €</td><td class="td-amber">30 €</td></tr>
-              <tr><td>Ménage 3h (régulier)</td><td>90 €</td><td>45 €</td><td class="td-amber">45 €</td></tr>
-              <tr><td>Grand nettoyage (Studio / T1)</td><td>120 €</td><td>60 €</td><td class="td-amber">60 €</td></tr>
-              <tr><td>Mensuel (4 × 2h)</td><td>240 €/mois</td><td>120 €</td><td class="td-amber">120 €/mois</td></tr>
+              <tr><td>Ménage 2h (régulier)</td><td>70 €</td><td>35 €</td><td class="td-amber">35 €</td></tr>
+              <tr><td>Ménage 3h (régulier)</td><td>105 €</td><td>52,50 €</td><td class="td-amber">52,50 €</td></tr>
+              <tr><td>Grand nettoyage (Studio / T1)</td><td>à partir de 155 €</td><td>77,50 €</td><td class="td-amber">à partir de 77,50 €</td></tr>
+              <tr><td>Mensuel (4 × 2h)</td><td>280 €/mois</td><td>140 €</td><td class="td-amber">140 €/mois</td></tr>
               <tr><td>Airbnb Studio / T1</td><td>60 €/passage</td><td>—</td><td class="td-amber">60 €</td></tr>
               <tr><td>Airbnb T3</td><td>100 €/passage</td><td>—</td><td class="td-amber">100 €</td></tr>
             </tbody>
@@ -1015,14 +1018,14 @@ footer{background:var(--text);padding:38px 5%}
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment se passe la première prise de contact ? <span class="faq-icon">+</span></div><div class="faq-a">Un simple appel ou message suffit. Je vous réponds sous 24h. Si votre besoin correspond à ce que je propose, on fixe une visite gratuite sans engagement pour estimer la durée et établir un devis précis.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Dois-je fournir les produits d'entretien ? <span class="faq-icon">+</span></div><div class="faq-a">J'apporte mes produits d'entretien et le petit matériel transportable. En revanche, le matériel encombrant est à prévoir par le client : aspirateur, kit seau + serpillière, escabeau, échelle et autres équipements non transportables. Si vous avez des produits spécifiques (allergie, préférence écologique), on en discute lors de la visite préalable.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Est-ce que je dois être présent(e) pendant l'intervention ? <span class="faq-icon">+</span></div><div class="faq-a">Non, ce n'est pas obligatoire. Beaucoup de mes clients me confient une clé ou utilisent une boîte à clé. La confiance est au cœur de ma façon de travailler. Vous partez travailler, vous rentrez dans un logement propre.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment fonctionne le crédit d'impôt SAP ? <span class="faq-icon">+</span></div><div class="faq-a">En tant que prestataire agréée SAP, 50% de vos dépenses vous sont remboursées via votre déclaration d'impôts. Je vous fournis automatiquement une attestation fiscale annuelle. Pour 2h de ménage à 60€, votre coût réel est de 30€. L'avance immédiate URSSAF permet même de ne payer que 50% directement.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quels sont les tarifs ? <span class="faq-icon">+</span></div><div class="faq-a">Ménage régulier : 30 €/h, soit 15 € réels après crédit d'impôt 50%. Grand nettoyage ponctuel : forfait selon superficie (Studio/T1 120 €, T2 150 €, T3 180 €, T4 sur devis). Pour les locations saisonnières : Studio/T1 60 €, T2 80 €, T3 100 €, T4 130 € par passage. La durée est estimée lors de la visite gratuite, sans engagement.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment fonctionne le crédit d'impôt SAP ? <span class="faq-icon">+</span></div><div class="faq-a">En tant que prestataire agréée SAP, 50% de vos dépenses vous sont remboursées via votre déclaration d'impôts. Je vous fournis automatiquement une attestation fiscale annuelle. Pour 2h de ménage à 70€, votre coût réel est de 35€. L'avance immédiate URSSAF permet même de ne payer que 50% directement.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quels sont les tarifs ? <span class="faq-icon">+</span></div><div class="faq-a">Ménage régulier : 35 €/h, soit 17,50 € réels après crédit d'impôt 50%. Ménage ponctuel à l'heure, sans engagement : 38 €/h, soit 19 € réels. Grand nettoyage ponctuel : forfait à partir de la superficie (Studio/T1 à partir de 155 €, T2 à partir de 190 €, T3 à partir de 230 €, T4 sur devis). Pour les locations saisonnières : Studio/T1 60 €, T2 80 €, T3 100 €, T4 130 € par passage. La durée est estimée lors de la visite gratuite, sans engagement.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment annuler ou modifier une intervention ? <span class="faq-icon">+</span></div><div class="faq-a">Pour les particuliers, je demande un préavis de 48h. Pour les locations saisonnières, 12h à l'avance (en dessous, 50% du forfait est dû). Je comprends les imprévus et on s'arrange toujours.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quelle est votre zone d'intervention ? <span class="faq-icon">+</span></div><div class="faq-a">J'interviens uniquement à Montpellier. Je ne suis pas véhiculée, mon périmètre est centré sur la ville. Précisez votre quartier lors de votre demande pour que je confirme l'accès.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Puis-je tester avant de m'engager ? <span class="faq-icon">+</span></div><div class="faq-a">Oui, pour les particuliers je propose une première séance sans engagement. Vous voyez le résultat avant de signer quoi que ce soit. C'est ma façon de montrer ce que je fais plutôt que de le promettre.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le prix d'un ménage à domicile à Montpellier ? <span class="faq-icon">+</span></div><div class="faq-a">Le ménage régulier est facturé 30€ de l'heure. Grâce à l'agrément SAP, les particuliers récupèrent 50% en crédit d'impôt, soit un coût réel de 15€/h.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le prix d'un ménage à domicile à Montpellier ? <span class="faq-icon">+</span></div><div class="faq-a">Le ménage régulier est facturé 35€ de l'heure. Grâce à l'agrément SAP, les particuliers récupèrent 50% en crédit d'impôt, soit un coût réel de 17,50€/h.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le prix d'un nettoyage Airbnb à Montpellier ? <span class="faq-icon">+</span></div><div class="faq-a">La rotation inter-séjours est à 60€ pour un Studio ou T1, 80€ pour un T2, 100€ pour un T3, 130€ pour un T4. Intervention rapide, linge changé, logement prêt pour le prochain voyageur.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le tarif d'un grand ménage ponctuel à Montpellier ? <span class="faq-icon">+</span></div><div class="faq-a">Studio ou T1 : 120€. T2 : 150€. T3 : 180€. T4 : sur devis. Le crédit d'impôt de 50% s'applique pour les particuliers, ce qui ramène ces tarifs à 60€, 75€ et 90€.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le tarif d'un grand ménage ponctuel à Montpellier ? <span class="faq-icon">+</span></div><div class="faq-a">Studio ou T1 : à partir de 155€. T2 : à partir de 190€. T3 : à partir de 230€. T4 : sur devis. Le crédit d'impôt de 50% s'applique pour les particuliers, ce qui ramène ces tarifs à 77,50€, 95€ et 115€.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Faites-vous le ménage entre deux séjours Airbnb ? <span class="faq-icon">+</span></div><div class="faq-a">Oui. Je gère les rotations complètes : nettoyage, changement du linge, vérification de l'état du logement et signalement des anomalies avant l'arrivée du prochain voyageur.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le tarif du repassage à domicile à Montpellier ? <span class="faq-icon">+</span></div><div class="faq-a">22€/h en combinaison avec un ménage. 25€/h en prestation seule. Crédit d'impôt 50% applicable pour les particuliers.</div></div>
     </div>
