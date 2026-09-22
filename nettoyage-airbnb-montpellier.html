@@ -46,7 +46,7 @@
       "description": "Nettoyage professionnel entre chaque réservation Airbnb à Montpellier. Changement de linge, désinfection, photos envoyées au propriétaire.",
       "areaServed": "Montpellier",
       "audience": {"@type": "BusinessAudience","audienceType": "Hôtes Airbnb et conciergeries"},
-      "priceRange": "60€ – 130€"
+      "priceRange": "60€ – 155€"
     },
     {
       "@type": "BreadcrumbList",
@@ -59,10 +59,10 @@
       "@type": "FAQPage",
       "mainEntity": [
         {"@type": "Question","name": "Comment se passe la première mise en place ?","acceptedAnswer": {"@type": "Answer","text": "Je visite votre logement pour en prendre connaissance, noter les spécificités et établir un forfait définitif. On convient ensuite d'un mode opératoire : accès aux clés, check-list personnalisée, contact WhatsApp direct pour les confirmations."}},
-        {"@type": "Question","name": "Comment gérez-vous les check-out et check-in rapprochés ?","acceptedAnswer": {"@type": "Answer","text": "J'essaie de planifier les interventions dès que possible après le départ du voyageur. Idéalement, j'ai besoin d'un minimum de 2h entre le départ et l'arrivée suivante. En cas de contrainte horaire particulière, on en discute lors de la mise en place."}},
-        {"@type": "Question","name": "Qui fournit les draps et serviettes ?","acceptedAnswer": {"@type": "Answer","text": "C'est vous qui fournissez le linge (draps, serviettes, torchons). Je m'occupe de retirer le linge sale et de mettre en place le linge propre. Si vous avez besoin d'un service de blanchisserie, je peux vous orienter vers des partenaires locaux."}},
+        {"@type": "Question","name": "Comment gérez-vous les check-out et check-in rapprochés ?","acceptedAnswer": {"@type": "Answer","text": "Le créneau nécessaire dépend du logement (typologie, état, linge à traiter). On le définit ensemble lors de la mise en place, selon vos horaires de check-out et de check-in."}},
+        {"@type": "Question","name": "Qui fournit les draps et serviettes ?","acceptedAnswer": {"@type": "Answer","text": "C'est vous qui fournissez le linge propre et qui gardez un stock suffisant sur place. Pendant la rotation, je retire le linge utilisé, je le mets en sac à l'endroit convenu, je change les draps et j'installe les serviettes propres. Je ne transporte pas le linge et je ne propose pas de blanchisserie. Le lavage sur place n'est possible qu'à titre exceptionnel, si le logement est équipé d'un lave-linge et d'un sèche-linge et que le créneau le permet."}},
         {"@type": "Question","name": "Comment se passe l'accès au logement ?","acceptedAnswer": {"@type": "Answer","text": "Plusieurs options : boîte à clé sécurisée (recommandé), clé déposée, ou serrure connectée. On choisit ensemble la solution la plus pratique pour vous lors de la mise en place."}},
-        {"@type": "Question","name": "Que se passe-t-il si un voyageur a laissé le logement dans un état inhabituel ?","acceptedAnswer": {"@type": "Answer","text": "Je vous préviens immédiatement avec photos à l'appui. Une majoration de 50 € peut s'appliquer en cas d'encrassement important (à valider avec vous avant intervention). Cela vous permet aussi de signaler le problème à Airbnb si nécessaire."}},
+        {"@type": "Question","name": "Que se passe-t-il si un voyageur a laissé le logement dans un état inhabituel ?","acceptedAnswer": {"@type": "Answer","text": "Une majoration de 50 € peut être appliquée en cas d'état anormal laissé par le voyageur, après évaluation et validation avec le propriétaire avant intervention. Je vous préviens immédiatement avec photos à l'appui, ce qui vous permet aussi de signaler le problème à Airbnb si nécessaire."}},
         {"@type": "Question","name": "Est-ce que le crédit d'impôt s'applique aux prestations Airbnb ?","acceptedAnswer": {"@type": "Answer","text": "Non. Le crédit d'impôt SAP de 50% s'applique uniquement aux prestations réalisées dans votre résidence principale ou secondaire à titre personnel. Pour les locations saisonnières à but locatif, ce dispositif ne s'applique pas."}}
       ]
     }
@@ -395,7 +395,7 @@ footer{background:var(--text);padding:38px 5%}
       <a href="#tarifs" class="btn-outline">Voir les tarifs</a>
       <a href="#contact" class="btn-outline">Formulaire détaillé</a>
     </div>
-    <p class="hero-reassure">Forfaits fixes sans mauvaise surprise · Photos après chaque passage · 10 ans d'expérience hôtelière</p>
+    <p class="hero-reassure">Tarif ferme, sauf état anormal laissé par le voyageur (évalué et validé avec vous) · Photos après chaque passage · 10 ans d'expérience hôtelière</p>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">60<span> €</span></div><div class="stat-label">Forfait Studio / T1</div></div>
       <div class="stat"><div class="stat-num">10<span> ans</span></div><div class="stat-label">Expérience hôtelière</div></div>
@@ -442,7 +442,7 @@ footer{background:var(--text);padding:38px 5%}
       </div>
       <div class="feat-card">
         <div class="feat-ico">💶</div>
-        <div><h4>Forfaits fixes, zéro surprise</h4><p>Pas de facturation à l'heure. Un forfait selon la superficie, connu à l'avance. Vous gérez votre budget sans mauvaise surprise.</p></div>
+        <div><h4>Tarif ferme, annoncé à l'avance</h4><p>Pas de facturation à l'heure. Un forfait connu selon la superficie. En cas d'état anormal laissé par le voyageur, une majoration est évaluée et validée avec vous avant toute intervention.</p></div>
       </div>
       <div class="feat-card">
         <div class="feat-ico">🤝</div>
@@ -458,33 +458,56 @@ footer{background:var(--text);padding:38px 5%}
     <div class="section-header">
       <div class="section-tag amber">💶 Tarifs</div>
       <h2>Forfaits ménage inter-locations<br><em>Montpellier</em></h2>
-      <p>Tarifs fixes par passage selon la superficie du logement. Pas de surprise à la fin.</p>
+      <p>Tarifs fixes par passage selon la superficie du logement.</p>
     </div>
 
     <!-- ROTATION INTER-SÉJOUR -->
     <div class="forfait-block">
       <div class="forfait-block-tag">Forfait par passage</div>
       <h3>Rotation inter-séjour</h3>
-      <p class="forfait-sub">Nettoyage complet entre deux réservations, changement de linge, mise en place, envoi de photos sur demande. Votre logement est prêt à accueillir.</p>
+      <p class="forfait-sub">Nettoyage complet entre deux réservations, changement de linge, mise en place, envoi de photos après chaque passage. Votre logement est prêt à accueillir.</p>
       <div class="price-grid-main">
         <div class="price-tile"><div class="price-tile-label">Studio / T1</div><div class="price-tile-val">60 €</div><div class="price-tile-unit">/ passage</div></div>
         <div class="price-tile"><div class="price-tile-label">T2</div><div class="price-tile-val">80 €</div><div class="price-tile-unit">/ passage</div></div>
-        <div class="price-tile"><div class="price-tile-label">T3</div><div class="price-tile-val">100 €</div><div class="price-tile-unit">/ passage</div></div>
-        <div class="price-tile"><div class="price-tile-label">T4</div><div class="price-tile-val">130 €</div><div class="price-tile-unit">/ passage</div></div>
+        <div class="price-tile"><div class="price-tile-label">T3</div><div class="price-tile-val">120 €</div><div class="price-tile-unit">/ passage</div></div>
+        <div class="price-tile"><div class="price-tile-label">T4</div><div class="price-tile-val">155 €</div><div class="price-tile-unit">/ passage</div></div>
       </div>
-      <div class="price-note">⚠️ <strong>Encrassement constaté à l'arrivée :</strong> majoration de 50 € validée avec vous avant toute intervention.</div>
+      <div class="price-note">⚠️ Une majoration de 50 € peut être appliquée en cas d'état anormal laissé par le voyageur, après évaluation et validation avec le propriétaire avant intervention.</div>
+    </div>
+
+    <!-- LE LINGE -->
+    <div class="forfait-block">
+      <div class="forfait-block-tag">Linge</div>
+      <h3>Le linge : comment ça se passe</h3>
+      <p class="forfait-sub">Vous fournissez le linge propre, je m'occupe de tout le reste pendant la rotation.</p>
+      <div class="included-grid" style="gap:16px;">
+        <div class="inc-card" style="box-shadow:none;">
+          <div class="inc-card-title">✓ Compris dans chaque rotation</div>
+          <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Retrait du linge utilisé, changement des draps, lits faits au standard hôtelier, installation des serviettes propres, pliage et rangement du linge propre disponible. Aucun supplément.</p>
+        </div>
+        <div class="inc-card" style="box-shadow:none;">
+          <div class="inc-card-title">🧺 Ce que vous fournissez</div>
+          <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Un stock de linge propre suffisant dans le logement. Prévoyez au minimum 2 jeux complets, pour qu'un jeu soit toujours prêt pendant que l'autre est lavé. Si le linge disponible ne suffit pas, je réalise la rotation avec ce qui est là et je vous préviens avant l'arrivée du voyageur. Le forfait reste dû.</p>
+        </div>
+        <div class="inc-card" style="box-shadow:none;">
+          <div class="inc-card-title">✕ Ce que je ne fais pas</div>
+          <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Je ne transporte pas le linge et je ne suis pas une blanchisserie. Le linge utilisé est mis en sac à l'endroit convenu dans le logement.</p>
+        </div>
+        <div class="inc-card" style="box-shadow:none;">
+          <div class="inc-card-title">⏳ Gestion du linge sur place, à titre exceptionnel</div>
+          <p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Lorsque le logement dispose d'un lave-linge et d'un sèche-linge, possible uniquement sur accord préalable et selon le créneau disponible entre deux séjours : lavage, séchage et pliage du linge de maison. Le repassage peut également être réalisé si le matériel nécessaire est disponible. Ce n'est pas inclus dans la rotation et ce n'est jamais présenté comme une blanchisserie ni comme systématiquement disponible. Tarif sur devis selon le volume de linge, les équipements disponibles et le temps entre deux séjours.</p>
+        </div>
+      </div>
     </div>
 
     <!-- MÉNAGE EXPRESS -->
     <div class="forfait-block">
-      <div class="forfait-block-tag">Créneaux courts · max 1h30</div>
+      <div class="forfait-block-tag">Créneaux courts · durée indicative ~1h30</div>
       <h3>Ménage express</h3>
-      <p class="forfait-sub">Pour les rotations courtes entre deux voyageurs. SDB, WC, cuisine, sols et linge traités en priorité. Pour un nettoyage complet, voir la rotation standard.</p>
+      <p class="forfait-sub">Pour les rotations courtes entre deux voyageurs, réservé aux Studio/T1 et T2. SDB, WC, cuisine, sols et changement des draps. Pour un T3/T4 ou un nettoyage complet, voir la rotation standard.</p>
       <div class="price-grid-main">
         <div class="price-tile"><div class="price-tile-label">Studio / T1</div><div class="price-tile-val">50 €</div><div class="price-tile-unit">/ passage</div></div>
         <div class="price-tile"><div class="price-tile-label">T2</div><div class="price-tile-val">65 €</div><div class="price-tile-unit">/ passage</div></div>
-        <div class="price-tile"><div class="price-tile-label">T3</div><div class="price-tile-val">85 €</div><div class="price-tile-unit">/ passage</div></div>
-        <div class="price-tile"><div class="price-tile-label">T4</div><div class="price-tile-val">105 €</div><div class="price-tile-unit">/ passage</div></div>
       </div>
     </div>
 
@@ -496,20 +519,12 @@ footer{background:var(--text);padding:38px 5%}
 
     <div class="addon-grid">
       <div class="addon-card">
-        <div class="addon-tag">Changement & pliage hôtelier</div>
-        <div class="addon-name">Pack Linge</div>
-        <p class="addon-desc">Linge propre fourni par le propriétaire. Changement, pliage façon hôtel, mise en scène inclus.</p>
-        <div class="addon-row"><span class="addon-row-label">1 lit + 2 serviettes</span><span class="addon-row-price">20 €</span></div>
-        <div class="addon-row"><span class="addon-row-label">2 lits + 4 serviettes</span><span class="addon-row-price">35 €</span></div>
-        <div class="addon-row"><span class="addon-row-label">3 lits + 6 serviettes</span><span class="addon-row-price">50 €</span></div>
-        <div class="addon-row"><span class="addon-row-label">4 lits + 8 serviettes</span><span class="addon-row-price">65 €</span></div>
-      </div>
-      <div class="addon-card">
         <div class="addon-tag">Mise en scène complète</div>
         <div class="addon-name">Check-in Premium</div>
-        <p class="addon-desc">Logement préparé comme une chambre d'hôtel : serviettes origami, vérification équipements, mot de bienvenue, rapport photo envoyé avant l'arrivée du voyageur.</p>
+        <p class="addon-desc">En complément d'une rotation (lits et serviettes déjà inclus) : serviettes en origami, vérification des équipements, mot de bienvenue, rapport photo envoyé avant l'arrivée du voyageur.</p>
         <div class="addon-row"><span class="addon-row-label">En complément d'une rotation</span><span class="addon-row-price">+30 €</span></div>
         <div class="addon-row"><span class="addon-row-label">Prestation seule</span><span class="addon-row-price">55 €</span></div>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px solid var(--cream-dark);">Rotation + Check-in Premium : Studio/T1 90 €, T2 110 €, T3 150 €, T4 185 €.</p>
       </div>
       <div class="addon-card">
         <div class="addon-tag">Gestion des consommables</div>
@@ -518,18 +533,9 @@ footer{background:var(--text);padding:38px 5%}
         <div class="addon-row"><span class="addon-row-label">Forfait service (produits client)</span><span class="addon-row-price">10 €</span></div>
         <div class="addon-row"><span class="addon-row-label">Achat par BrightNest</span><span class="addon-row-price">Prix réel +10%</span></div>
       </div>
-      <div class="addon-card featured">
-        <div class="addon-tag">Formule complète</div>
-        <div class="addon-name">Rotation + Linge + Check-in</div>
-        <p class="addon-desc">La combinaison idéale pour déléguer entièrement entre chaque voyageur.</p>
-        <div class="addon-row"><span class="addon-row-label">1 lit</span><span class="addon-row-price">110 €</span></div>
-        <div class="addon-row"><span class="addon-row-label">2 lits</span><span class="addon-row-price">145 €</span></div>
-        <div class="addon-row"><span class="addon-row-label">3 lits</span><span class="addon-row-price">180 €</span></div>
-        <div class="addon-row"><span class="addon-row-label">4 lits</span><span class="addon-row-price">225 €</span></div>
-      </div>
     </div>
 
-    <div class="price-note">📐 <strong>Configuration atypique</strong> (plus de 4 lits, dressing, mezzanine, plusieurs salles de bain) : devis personnalisé selon votre logement.</div>
+    <div class="price-note">📐 <strong>Configuration atypique</strong> (grand logement au-delà d'un T4, dressing, mezzanine, plusieurs salles de bain) : devis personnalisé selon votre logement.</div>
 
     <div style="text-align:center;margin-top:32px;">
       <a href="#contact" class="btn-primary">Demander un devis pour mon logement</a>
@@ -592,7 +598,7 @@ footer{background:var(--text);padding:38px 5%}
         <ul class="task-list">
           <li><span class="tick">✓</span>Inspection visuelle complète du logement</li>
           <li><span class="tick">✓</span>Signalement immédiat des anomalies</li>
-          <li><span class="tick">✓</span>Photos envoyées après intervention (sur demande)</li>
+          <li><span class="tick">✓</span>Photos envoyées après chaque intervention</li>
           <li><span class="tick">✓</span>Confirmation de fin d'intervention par message</li>
         </ul>
       </div>
@@ -600,9 +606,7 @@ footer{background:var(--text);padding:38px 5%}
         <div class="inc-card-title">🌿 Options</div>
         <ul class="task-list">
           <li><span class="tick">✓</span>Produits éco-certifiés sur demande</li>
-          <li><span class="tick">✓</span>Réassort des consommables (café, thé, gel douche…)</li>
-          <li><span class="tick">✓</span>Mise en place d'un panier de bienvenue</li>
-          <li><span class="tick">✓</span>Check-out de votre logement avant chaque arrivée</li>
+          <li><span class="tick">✓</span>Signalement des consommables manquants (inclus, gratuit)</li>
         </ul>
       </div>
     </div>
@@ -621,7 +625,7 @@ footer{background:var(--text);padding:38px 5%}
       <div class="process-step"><div class="step-num">1</div><h4>On se parle</h4><p>Vous m'expliquez votre logement, sa superficie et la fréquence de vos réservations.</p></div>
       <div class="process-step"><div class="step-num">2</div><h4>Visite du logement</h4><p>Je me déplace pour voir le bien et établir un devis précis, sans engagement.</p></div>
       <div class="process-step"><div class="step-num">3</div><h4>Mise en place</h4><p>Je m'adapte à votre calendrier Airbnb. Chaque check-out déclenche mon intervention.</p></div>
-      <div class="process-step"><div class="step-num">4</div><h4>Suivi & photos</h4><p>Après chaque passage, vous recevez une confirmation et les photos si vous le souhaitez.</p></div>
+      <div class="process-step"><div class="step-num">4</div><h4>Suivi & photos</h4><p>Après chaque passage, vous recevez une confirmation et les photos.</p></div>
     </div>
   </div>
 </section>
@@ -686,10 +690,10 @@ footer{background:var(--text);padding:38px 5%}
     </div>
     <div class="faq-list">
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment se passe la première mise en place ? <span class="faq-icon">+</span></div><div class="faq-a">Je visite votre logement pour en prendre connaissance, noter les spécificités et établir un forfait définitif. On convient ensuite d'un mode opératoire : accès aux clés, check-list personnalisée, contact WhatsApp direct pour les confirmations.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment gérez-vous les check-out et check-in rapprochés ? <span class="faq-icon">+</span></div><div class="faq-a">J'essaie de planifier les interventions dès que possible après le départ du voyageur. Idéalement, j'ai besoin d'un minimum de 2h entre le départ et l'arrivée suivante. En cas de contrainte horaire particulière, on en discute lors de la mise en place.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Qui fournit les draps et serviettes ? <span class="faq-icon">+</span></div><div class="faq-a">C'est vous qui fournissez le linge (draps, serviettes, torchons). Je m'occupe de retirer le linge sale et de mettre en place le linge propre. Si vous avez besoin d'un service de blanchisserie, je peux vous orienter vers des partenaires locaux.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment gérez-vous les check-out et check-in rapprochés ? <span class="faq-icon">+</span></div><div class="faq-a">Le créneau nécessaire dépend du logement (typologie, état, linge à traiter). On le définit ensemble lors de la mise en place, selon vos horaires de check-out et de check-in.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Qui fournit les draps et serviettes ? <span class="faq-icon">+</span></div><div class="faq-a">C'est vous qui fournissez le linge propre et qui gardez un stock suffisant sur place. Pendant la rotation, je retire le linge utilisé, je le mets en sac à l'endroit convenu, je change les draps et j'installe les serviettes propres. Je ne transporte pas le linge et je ne propose pas de blanchisserie. Le lavage sur place n'est possible qu'à titre exceptionnel, si le logement est équipé d'un lave-linge et d'un sèche-linge et que le créneau le permet.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment se passe l'accès au logement ? <span class="faq-icon">+</span></div><div class="faq-a">Plusieurs options : boîte à clé sécurisée (recommandé), clé déposée, ou serrure connectée. On choisit ensemble la solution la plus pratique pour vous lors de la mise en place.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Que se passe-t-il si un voyageur a laissé le logement dans un état inhabituel ? <span class="faq-icon">+</span></div><div class="faq-a">Je vous préviens immédiatement avec photos à l'appui. Une majoration de 50 € peut s'appliquer en cas d'encrassement important (à valider avec vous avant intervention). Cela vous permet aussi de signaler le problème à Airbnb si nécessaire.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Que se passe-t-il si un voyageur a laissé le logement dans un état inhabituel ? <span class="faq-icon">+</span></div><div class="faq-a">Une majoration de 50 € peut être appliquée en cas d'état anormal laissé par le voyageur, après évaluation et validation avec le propriétaire avant intervention. Je vous préviens immédiatement avec photos à l'appui, ce qui vous permet aussi de signaler le problème à Airbnb si nécessaire.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Est-ce que le crédit d'impôt s'applique aux prestations Airbnb ? <span class="faq-icon">+</span></div><div class="faq-a">Non. Le crédit d'impôt SAP de 50% s'applique uniquement aux prestations réalisées dans votre résidence principale ou secondaire à titre personnel. Pour les locations saisonnières à but locatif, ce dispositif ne s'applique pas.</div></div>
     </div>
   </div>
