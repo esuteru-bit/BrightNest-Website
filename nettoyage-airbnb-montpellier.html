@@ -69,17 +69,10 @@
   ]
 }
 </script>
-<!-- Google Analytics 4 : remplacer G-F28Q9KXGM9 par votre Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F28Q9KXGM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F28Q9KXGM9');
-</script>
-<!-- Calendly popup -->
+<!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
+<script src="/cookie-consent.js"></script>
+<!-- Calendly popup : le script n'est chargé qu'au clic -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -361,7 +354,7 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="/#credit-impot">Crédit d'impôt</a></li>
       <li><a href="/#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});return false;" class="nav-cta-reserve">📅 Réserver</a></li>
+      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -374,7 +367,7 @@ footer{background:var(--text);padding:38px 5%}
   <a href="/#credit-impot" onclick="document.getElementById('mobileNav').classList.remove('open')">Crédit d'impôt</a>
   <a href="/#faq" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQ</a>
   <a href="#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
+  <a href="javascript:void(0)" onclick="openCalendly();document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <!-- BREADCRUMB -->
@@ -459,6 +452,7 @@ footer{background:var(--text);padding:38px 5%}
       <div class="section-tag amber">💶 Tarifs</div>
       <h2>Forfaits ménage inter-locations<br><em>Montpellier</em></h2>
       <p>Tarifs fixes par passage selon la superficie du logement.</p>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:10px;line-height:1.6;">Un devis personnalisé gratuit vous est remis dès que le prix total est supérieur ou égal à 100 € TTC, ou sur simple demande. Toutes les prestations sont réalisées en mode prestataire : BrightNest Services intervient directement, le client n'est pas employeur. Le crédit d'impôt ne s'applique pas aux locations saisonnières.</p>
     </div>
 
     <!-- ROTATION INTER-SÉJOUR -->
@@ -678,6 +672,7 @@ footer{background:var(--text);padding:38px 5%}
         <div class="rcard-author"><div class="rcard-avatar">MP</div><div><div class="rcard-name">Marie-Pierre D.</div><div class="rcard-loc">Hôte Airbnb | T3, Les Arceaux</div></div></div>
       </div>
     </div>
+    <p style="font-size:.76rem;color:var(--muted);margin-top:20px;line-height:1.6;">Avis recueillis directement par BrightNest Services auprès de ses clients par message écrit, publiés avec leur accord, sans contrepartie. Ils ne font pas l'objet d'une vérification par un tiers.</p>
   </div>
 </section>
 
@@ -711,7 +706,7 @@ footer{background:var(--text);padding:38px 5%}
       <a href="/nettoyage-appartement-montpellier" class="autre-card">
         <div class="autre-card-ico">🏠</div>
         <h4>Ménage régulier à domicile</h4>
-        <p>Planning fixe, même intervenante à chaque passage. Idéal pour maintenir un logement impeccable au quotidien. Éligible crédit d'impôt 50%.</p>
+        <p>Planning fixe, même intervenante à chaque passage. Idéal pour maintenir un logement impeccable au quotidien. Éligible au crédit d'impôt de 50 %* pour les particuliers.</p>
         <span class="autre-card-link">Découvrir le ménage régulier →</span>
       </a>
       <a href="/menage-ponctuel-montpellier" class="autre-card">
@@ -776,6 +771,7 @@ footer{background:var(--text);padding:38px 5%}
           <div class="form-group"><label>Fréquence estimée des rotations</label><input type="text" name="frequence" placeholder="Ex : 3 à 5 rotations par mois"></div>
           <div class="form-group"><label>Votre message (optionnel)</label><textarea name="message" placeholder="Détails supplémentaires, contraintes, questions…"></textarea></div>
           <button type="submit" class="btn-submit">Envoyer ma demande →</button>
+          <p style="font-size:.76rem;color:var(--muted);margin-top:10px;">Vos données servent uniquement à répondre à votre demande. <a href="/confidentialite" style="color:var(--green);text-decoration:underline;">En savoir plus</a></p>
         </form>
       </div>
     </div>
@@ -808,9 +804,11 @@ function toggleFaq(el) {
       <a href="#contact">Contact</a>
       <a href="/mentions-legales">Mentions légales</a>
       <a href="/cgv">CGV</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <a href="#" onclick="openCookiePrefs(event)">Gérer les cookies</a>
     </div>
   </div>
-  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Agrément SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Déclaration SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; © 2026 BrightNest Services</div>
 </footer>
 
 <!-- WHATSAPP -->
