@@ -21,17 +21,10 @@
 <meta name="twitter:description" content="CGV de BrightNest Services : devis, paiement, crédit d'impôt, annulation, locations saisonnières, médiation.">
 <meta name="twitter:image" content="https://brightnestservices.fr/og-image.svg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<!-- Google Analytics 4 : remplacer G-F28Q9KXGM9 par votre Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F28Q9KXGM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F28Q9KXGM9');
-</script>
-<!-- Calendly popup -->
+<!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
+<script src="/cookie-consent.js"></script>
+<!-- Calendly popup : le script n'est chargé qu'au clic -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -135,7 +128,7 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="/#credit-impot">Crédit d'impôt</a></li>
       <li><a href="/#faq">FAQ</a></li>
       <li><a href="/#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});return false;" class="nav-cta-reserve">📅 Réserver</a></li>
+      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -148,7 +141,7 @@ footer{background:var(--text);padding:38px 5%}
   <a href="/#credit-impot" onclick="document.getElementById('mobileNav').classList.remove('open')">Crédit d'impôt</a>
   <a href="/#faq" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQ</a>
   <a href="/#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
+  <a href="javascript:void(0)" onclick="openCalendly();document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <!-- CGV -->
@@ -156,16 +149,18 @@ footer{background:var(--text);padding:38px 5%}
   <div class="section-inner" style="max-width:760px;margin:0 auto;">
     <div class="legal-doc">
       <h1>Conditions générales de vente</h1>
-      <p class="legal-date">En vigueur au 22/09/2026</p>
+      <p class="legal-date">En vigueur au 25/09/2026</p>
 
       <article class="legal-article">
         <h2>1. Objet</h2>
-        <p>Les présentes conditions générales de vente (CGV) régissent les prestations de ménage à domicile, de repassage et d'entretien de locations saisonnières fournies par BrightNest Services (Essex Mfegue Estelle Cécile, EI, 66 Avenue de Castelnau, 34090 Montpellier, SIRET 951 623 024 00019, agrément SAP n° SAP951623024) à des clients particuliers et professionnels, à Montpellier. Toute commande vaut acceptation des présentes CGV. Des conditions particulières signées avec un client prévalent sur les présentes CGV.</p>
+        <p>Les présentes conditions générales de vente (CGV) régissent les prestations de ménage à domicile, de repassage et d'entretien de locations saisonnières fournies par BrightNest Services (Essex Mfegue Estelle Cécile, EI, 66 Avenue de Castelnau, 34090 Montpellier, SIRET 951 623 024 00019, déclaration SAP n° SAP951623024) à des clients particuliers et professionnels, à Montpellier. Toute commande vaut acceptation des présentes CGV. Des conditions particulières signées avec un client prévalent sur les présentes CGV.</p>
       </article>
 
       <article class="legal-article">
         <h2>2. Devis et commande</h2>
         <p>Toute prestation fait l'objet d'un devis gratuit, valable 30 jours. Les forfaits affichés sur le site sont indicatifs : le prix est confirmé après visite ou échange téléphonique. La commande est confirmée à réception de l'accord écrit du client (email, SMS ou WhatsApp).</p>
+        <p>Conformément à l'arrêté du 17 mars 2015 relatif à la publicité des prix des services à la personne, le vendeur remet gratuitement un devis personnalisé au consommateur à qui il propose une prestation ou un ensemble de prestations dont le prix total est supérieur ou égal à 100 € TTC ou au consommateur qui lui en fait la demande.</p>
+        <p>Toutes les prestations sont réalisées en mode prestataire : BrightNest Services intervient directement, le client n'est pas employeur.</p>
       </article>
 
       <article class="legal-article">
@@ -219,7 +214,13 @@ footer{background:var(--text);padding:38px 5%}
 
       <article class="legal-article">
         <h2>11. Droit de rétractation (clients consommateurs)</h2>
-        <p>Le client consommateur dispose d'un délai de rétractation de 14 jours à compter de l'acceptation du devis. S'il demande expressément que la prestation commence avant la fin de ce délai et que la prestation est entièrement exécutée, il renonce à son droit de rétractation, conformément à l'article L221-28 du Code de la consommation.</p>
+        <p>Le client consommateur dispose d'un délai de rétractation de 14 jours à compter de l'acceptation du devis. Il exerce ce droit en adressant, avant l'expiration de ce délai, une déclaration dénuée d'ambiguïté exprimant sa volonté de se rétracter, par e-mail à <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> ou par courrier à l'adresse de BrightNest Services indiquée à l'article 1. Il peut utiliser à cet effet le formulaire type de rétractation figurant en annexe des présentes CGV.</p>
+        <p>Pour un contrat conclu hors établissement, aucun paiement ne peut être exigé du client avant l'expiration d'un délai de 7 jours à compter de la conclusion du contrat, conformément à l'article L221-10 du Code de la consommation.</p>
+        <p>Si le client demande expressément que la prestation commence avant la fin du délai de rétractation :</p>
+        <ul>
+          <li>et que la prestation est entièrement exécutée avant la fin de ce délai, il renonce à son droit de rétractation, conformément à l'article L221-28 du Code de la consommation ;</li>
+          <li>et qu'il exerce ensuite son droit de rétractation alors que l'exécution a déjà commencé, il verse à BrightNest Services un montant correspondant au service fourni jusqu'à la communication de sa décision de se rétracter, proportionnellement au prix total de la prestation prévue au contrat, conformément à l'article L221-25 du Code de la consommation.</li>
+        </ul>
       </article>
 
       <article class="legal-article">
@@ -229,12 +230,27 @@ footer{background:var(--text);padding:38px 5%}
 
       <article class="legal-article">
         <h2>13. Données personnelles</h2>
-        <p>Les données du client (nom, coordonnées, adresse d'intervention) sont utilisées uniquement pour la gestion des prestations, la facturation et, le cas échéant, l'avance immédiate auprès de l'URSSAF. Elles ne sont ni vendues ni cédées. Le client peut demander leur accès, leur rectification ou leur suppression à contact@brightnestservices.fr.</p>
+        <p>Les données du client (nom, coordonnées, adresse d'intervention) sont utilisées uniquement pour la gestion des prestations, la facturation et, le cas échéant, l'avance immédiate auprès de l'URSSAF. Elles ne sont ni vendues ni cédées. Le client peut demander leur accès, leur rectification ou leur suppression à contact@brightnestservices.fr. Le détail des traitements, des durées de conservation et des destinataires figure dans notre <a href="/confidentialite">politique de confidentialité</a>.</p>
       </article>
 
       <article class="legal-article">
         <h2>14. Droit applicable</h2>
         <p>Les présentes CGV sont soumises au droit français. Tribunal du lieu de résidence du client pour les particuliers, tribunal de Montpellier pour les professionnels.</p>
+      </article>
+
+      <article class="legal-article">
+        <h2>Annexe : formulaire type de rétractation</h2>
+        <p>(Conformément à l'annexe de l'article R221-1 du Code de la consommation. Ce formulaire n'est à compléter et à renvoyer que si le client souhaite se rétracter du contrat, sauf dans les cas d'exclusion ou d'exception du droit de rétractation.)</p>
+        <p>À l'attention de BrightNest Services – Essex Mfegue Estelle Cécile, EI, 66 Avenue de Castelnau, 34090 Montpellier, <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> :</p>
+        <p>Je/nous (*) notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la prestation de service ci-dessous :</p>
+        <ul>
+          <li>Commandé le (*) / reçu le (*) : ……………………………</li>
+          <li>Nom du (des) consommateur(s) : ……………………………</li>
+          <li>Adresse du (des) consommateur(s) : ……………………………</li>
+          <li>Signature du (des) consommateur(s) (uniquement en cas de notification du présent formulaire sur papier) : ……………………………</li>
+          <li>Date : ……………………………</li>
+        </ul>
+        <p>(*) Rayer la mention inutile.</p>
       </article>
 
     </div>
@@ -254,9 +270,12 @@ footer{background:var(--text);padding:38px 5%}
       <a href="/#contact">Contact</a>
       <a href="/mentions-legales">Mentions légales</a>
       <a href="/cgv">CGV</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <a href="#" onclick="openCookiePrefs(event)">Gérer les cookies</a>
     </div>
   </div>
-  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Agrément SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; 💶 Éligible crédit d'impôt 50% &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Déclaration SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; 💶 Éligible au crédit d'impôt de 50 %* &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret" style="border-top:none;padding-top:0;margin-top:0;">*Pour les particuliers, dans les conditions légales.</div>
 </footer>
 
 <!-- WHATSAPP -->
