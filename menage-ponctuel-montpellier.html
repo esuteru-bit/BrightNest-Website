@@ -68,17 +68,10 @@
   ]
 }
 </script>
-<!-- Google Analytics 4 : remplacer G-F28Q9KXGM9 par votre Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F28Q9KXGM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F28Q9KXGM9');
-</script>
-<!-- Calendly popup -->
+<!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
+<script src="/cookie-consent.js"></script>
+<!-- Calendly popup : le script n'est chargé qu'au clic -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -337,7 +330,7 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="/#credit-impot">Crédit d'impôt</a></li>
       <li><a href="/#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});return false;" class="nav-cta-reserve">📅 Réserver</a></li>
+      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -350,7 +343,7 @@ footer{background:var(--text);padding:38px 5%}
   <a href="/#credit-impot" onclick="document.getElementById('mobileNav').classList.remove('open')">Crédit d'impôt</a>
   <a href="/#faq" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQ</a>
   <a href="#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
+  <a href="javascript:void(0)" onclick="openCalendly();document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <div class="breadcrumb">
@@ -370,7 +363,7 @@ footer{background:var(--text);padding:38px 5%}
       <a href="#tarifs" class="btn-outline">Voir les forfaits</a>
       <a href="#contact" class="btn-outline">Formulaire détaillé</a>
     </div>
-    <p class="hero-reassure">Forfait fixe selon superficie · 50% crédit d'impôt · Agréée SAP</p>
+    <p class="hero-reassure">Forfait fixe selon superficie · Éligible au crédit d'impôt de 50 %* · Déclarée SAP</p>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">60<span> €</span></div><div class="stat-label">Studio / T1 après crédit d'impôt</div></div>
       <div class="stat"><div class="stat-num">10<span> ans</span></div><div class="stat-label">expérience hôtelière</div></div>
@@ -383,7 +376,7 @@ footer{background:var(--text);padding:38px 5%}
 <div class="trust">
   <div class="trust-inner">
     <div class="trust-item"><span class="trust-dot">✦</span> Forfait fixe, annoncé à l'avance</div>
-    <div class="trust-item"><span class="trust-dot">✦</span> 50% crédit d'impôt, agréée SAP</div>
+    <div class="trust-item"><span class="trust-dot">✦</span> Éligible au crédit d'impôt de 50 %*, déclarée SAP</div>
     <div class="trust-item"><span class="trust-dot">✦</span> Sans engagement</div>
     <div class="trust-item"><span class="trust-dot">✦</span> Nettoyage en profondeur</div>
     <div class="trust-item"><span class="trust-dot">✦</span> Standard hôtelier</div>
@@ -552,8 +545,9 @@ footer{background:var(--text);padding:38px 5%}
     </div>
 
     <div style="background:var(--amber-pale);border:1px solid rgba(232,147,26,.25);border-radius:8px;padding:12px 16px;font-size:.84rem;color:var(--amber);font-weight:600;text-align:center;max-width:780px;margin:0 auto 28px;">
-      * Prix réels après crédit d'impôt de 50% (agrément SAP n° SAP951623024)
+      * Prix réels après crédit d'impôt de 50 % pour les particuliers, dans les conditions légales, hors paiement en espèces (déclaration SAP n° SAP951623024)
     </div>
+    <p style="font-size:.78rem;color:var(--muted);margin:0 auto 20px;max-width:780px;text-align:center;line-height:1.6;">Un devis personnalisé gratuit vous est remis dès que le prix total est supérieur ou égal à 100 € TTC, ou sur simple demande. Toutes les prestations sont réalisées en mode prestataire : BrightNest Services intervient directement, le client n'est pas employeur.</p>
     <div style="text-align:center;">
       <a href="#contact" class="btn-primary">Demander un devis pour mon logement</a>
     </div>
@@ -689,6 +683,7 @@ footer{background:var(--text);padding:38px 5%}
         <div class="rcard-author"><div class="rcard-avatar">LM</div><div><div class="rcard-name">Lucie M.</div><div class="rcard-loc">Nettoyage de printemps annuel, Montpellier</div></div></div>
       </div>
     </div>
+    <p style="font-size:.76rem;color:var(--muted);margin-top:20px;line-height:1.6;">Avis recueillis directement par BrightNest Services auprès de ses clients par message écrit, publiés avec leur accord, sans contrepartie. Ils ne font pas l'objet d'une vérification par un tiers.</p>
   </div>
 </section>
 
@@ -804,6 +799,7 @@ footer{background:var(--text);padding:38px 5%}
             <label for="taxCheck">🔖 Je souhaite des informations sur le crédit d'impôt 50%</label>
           </div>
           <button type="submit" class="btn-submit">Envoyer ma demande de devis →</button>
+          <p style="font-size:.76rem;color:var(--muted);margin-top:10px;">Vos données servent uniquement à répondre à votre demande. <a href="/confidentialite" style="color:var(--green);text-decoration:underline;">En savoir plus</a></p>
         </form>
       </div>
     </div>
@@ -828,7 +824,7 @@ function toggleFaq(el) {
 <footer>
   <div class="footer-inner">
     <div class="footer-logo"><span class="bright">Bright</span><span class="nest">Nest</span><span style="color:rgba(255,255,255,.6)">&nbsp;Services</span></div>
-    <div class="footer-text">Ménage ponctuel et grand nettoyage à Montpellier. Agréée SAP. Auto-entreprise déclarée.</div>
+    <div class="footer-text">Ménage ponctuel et grand nettoyage à Montpellier. Déclarée SAP. Auto-entreprise déclarée.</div>
     <div class="footer-links">
       <a href="/">Accueil</a>
       <a href="/nettoyage-appartement-montpellier">Ménage régulier</a>
@@ -836,9 +832,12 @@ function toggleFaq(el) {
       <a href="#contact">Contact</a>
       <a href="/mentions-legales">Mentions légales</a>
       <a href="/cgv">CGV</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <a href="#" onclick="openCookiePrefs(event)">Gérer les cookies</a>
     </div>
   </div>
-  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Agrément SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; 💶 Éligible crédit d'impôt 50% &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Déclaration SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; 💶 Éligible au crédit d'impôt de 50 %* &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret" style="border-top:none;padding-top:0;margin-top:0;">*Pour les particuliers, dans les conditions légales.</div>
 </footer>
 
 <!-- WHATSAPP -->
