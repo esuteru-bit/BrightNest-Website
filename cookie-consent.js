@@ -86,9 +86,21 @@
     document.head.appendChild(styleEl);
   }
 
+  function shiftWhatsAppButton(offsetPx){
+    var wa = document.querySelector('.wa-float');
+    if(!wa) return;
+    if(offsetPx){
+      wa.style.bottom = offsetPx + 'px';
+      wa.style.transition = 'bottom .25s';
+    } else {
+      wa.style.bottom = '';
+    }
+  }
+
   function removeBanner(){
     var el = document.getElementById('bn-cookie-banner');
     if(el && el.parentNode) el.parentNode.removeChild(el);
+    shiftWhatsAppButton(0);
   }
 
   function showBanner(){
@@ -107,6 +119,8 @@
       + '</div>'
       + '</div>';
     document.body.appendChild(el);
+    var bannerHeight = el.offsetHeight;
+    shiftWhatsAppButton(bannerHeight + 16);
     document.getElementById('bn-cookie-accept').addEventListener('click', function(){
       writeConsent('accepted');
       applyConsent('accepted');
@@ -118,6 +132,11 @@
       removeBanner();
     });
   }
+
+  window.addEventListener('resize', function(){
+    var el = document.getElementById('bn-cookie-banner');
+    if(el) shiftWhatsAppButton(el.offsetHeight + 16);
+  });
 
   window.openCookiePrefs = function(e){
     if(e && e.preventDefault) e.preventDefault();
