@@ -4,34 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mentions légales | BrightNest Services</title>
-<meta name="description" content="Mentions légales de BrightNest Services : éditeur du site, SIRET, agrément SAP, hébergeur, données personnelles, propriété intellectuelle.">
+<meta name="description" content="Mentions légales de BrightNest Services : éditeur du site, SIRET, déclaration SAP, hébergeur, assurance RC Pro, médiateur de la consommation.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#1B6B5A">
 <link rel="canonical" href="https://brightnestservices.fr/mentions-legales">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://brightnestservices.fr/mentions-legales">
 <meta property="og:title" content="Mentions légales | BrightNest Services">
-<meta property="og:description" content="Mentions légales de BrightNest Services : éditeur du site, SIRET, agrément SAP, hébergeur, données personnelles, propriété intellectuelle.">
+<meta property="og:description" content="Mentions légales de BrightNest Services : éditeur du site, SIRET, déclaration SAP, hébergeur, assurance RC Pro, médiateur de la consommation.">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image" content="https://brightnestservices.fr/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mentions légales | BrightNest Services">
-<meta name="twitter:description" content="Mentions légales de BrightNest Services : éditeur du site, SIRET, agrément SAP, hébergeur, données personnelles.">
+<meta name="twitter:description" content="Mentions légales de BrightNest Services : éditeur du site, SIRET, déclaration SAP, hébergeur, assurance RC Pro.">
 <meta name="twitter:image" content="https://brightnestservices.fr/og-image.svg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<!-- Google Analytics 4 : remplacer G-F28Q9KXGM9 par votre Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F28Q9KXGM9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F28Q9KXGM9');
-</script>
-<!-- Calendly popup -->
+<!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
+<script src="/cookie-consent.js"></script>
+<!-- Calendly popup : le script n'est chargé qu'au clic -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -135,7 +128,7 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="/#credit-impot">Crédit d'impôt</a></li>
       <li><a href="/#faq">FAQ</a></li>
       <li><a href="/#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});return false;" class="nav-cta-reserve">📅 Réserver</a></li>
+      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -148,7 +141,7 @@ footer{background:var(--text);padding:38px 5%}
   <a href="/#credit-impot" onclick="document.getElementById('mobileNav').classList.remove('open')">Crédit d'impôt</a>
   <a href="/#faq" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQ</a>
   <a href="/#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="Calendly.initPopupWidget({url:'https://calendly.com/estellessex'});document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
+  <a href="javascript:void(0)" onclick="openCalendly();document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <!-- MENTIONS LÉGALES -->
@@ -159,34 +152,32 @@ footer{background:var(--text);padding:38px 5%}
 
       <article class="legal-article">
         <h2>Éditeur du site</h2>
-        <p>BrightNest Services – Estelle Essex<br>Auto-entrepreneur<br>SIRET : 95162302400019<br>Numéro déclaratif SAP : SAP951623024<br>Adresse : Montpellier (34)<br>Téléphone : 07 58 44 65 10<br>E-mail : <a class="cf-email" href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a><br>Hébergeur : Netlify – https://www.netlify.com</p>
-      </article>
-
-      <article class="legal-article">
-        <h2>Directeur de publication</h2>
-        <p>Estelle Essex, auto-entrepreneur.</p>
+        <p>Essex Mfegue Estelle Cécile, EI<br>Nom commercial : BrightNest Services<br>66 Avenue de Castelnau, 34090 Montpellier<br>Téléphone : 07 58 44 65 10<br>E-mail : <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a><br>SIRET : 951 623 024 00019<br>Code APE : 81.21Z<br>Statut : micro-entrepreneur, TVA non applicable, article 293 B du Code général des impôts.</p>
       </article>
 
       <article class="legal-article">
         <h2>Activité déclarée</h2>
-        <p>Nettoyage courant des bâtiments : ménage à domicile, nettoyage de locations saisonnières (code APE 81.21Z). Numéro déclaratif SAP : SAP951623024.</p>
+        <p>Nettoyage courant des bâtiments : ménage à domicile, nettoyage de locations saisonnières (code APE 81.21Z). BrightNest Services est un organisme de services à la personne déclaré sous le n° SAP951623024. Il s'agit d'une déclaration et non d'un agrément.</p>
+      </article>
+
+      <article class="legal-article">
+        <h2>Directeur de publication</h2>
+        <p>Essex Mfegue Estelle Cécile, EI.</p>
+      </article>
+
+      <article class="legal-article">
+        <h2>Hébergeur</h2>
+        <p>Netlify<br>[À COMPLÉTER : raison sociale complète, adresse et téléphone Netlify]<br>https://www.netlify.com</p>
       </article>
 
       <article class="legal-article">
         <h2>Assurance responsabilité civile professionnelle</h2>
-        <p>BrightNest Services est couverte par une assurance Responsabilité Civile Professionnelle souscrite auprès de WAKAM (gestion Simplis), contrat n° 61552510, valable du 14/04/2026 au 13/04/2027, garantissant l'activité de nettoyage, ménage, repassage et services de pressing. Attestation disponible sur demande.</p>
+        <p>BrightNest Services est couverte par une assurance Responsabilité Civile Professionnelle Simplis souscrite auprès de l'assureur WAKAM, contrat n° 61552510, valable du 14/04/2026 au 13/04/2027, garantissant l'activité de nettoyage, ménage, repassage et services de pressing. Attestation disponible sur demande.</p>
       </article>
 
       <article class="legal-article">
-        <h2>Données personnelles (RGPD)</h2>
-        <p>Conformément au RGPD et à la loi Informatique &amp; Libertés :</p>
-        <ul>
-          <li>Collecte via formulaire : nom, téléphone, e-mail (devis uniquement).</li>
-          <li>Conservation : 1 an maximum, suppression sur demande.</li>
-          <li>Droits : Accès, rectification, suppression (contact : <a class="cf-email" href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a>).</li>
-          <li>Aucune vente ni partage de données à des tiers.</li>
-          <li>Cookies : aucun cookie de traçage utilisé.</li>
-        </ul>
+        <h2>Données personnelles</h2>
+        <p>Le traitement des données personnelles collectées sur ce site (formulaire de devis, cookies, outils utilisés) est détaillé dans notre <a href="/confidentialite">politique de confidentialité</a>.</p>
       </article>
 
       <article class="legal-article">
@@ -196,18 +187,18 @@ footer{background:var(--text);padding:38px 5%}
 
       <article class="legal-article">
         <h2>Responsabilité</h2>
-        <p>Informations données à titre indicatif. BrightNest Services décline toute responsabilité pour erreurs ou interruptions du site. Les prestations sont réalisées sur devis écrit. Annulation : 48h à l'avance pour les particuliers, 12h pour les locations saisonnières.</p>
+        <p>Informations données à titre indicatif. BrightNest Services décline toute responsabilité pour erreurs ou interruptions du site. Les prestations sont réalisées sur devis écrit, en mode prestataire : BrightNest Services intervient directement, le client n'est pas employeur. Annulation : 48h à l'avance pour les particuliers, 12h pour les locations saisonnières.</p>
       </article>
 
       <article class="legal-article">
         <h2>Crédit d'impôt</h2>
-        <p>Prestations éligibles au crédit d'impôt 50% (source : service-public.fr). Attestation fiscale annuelle fournie automatiquement.</p>
+        <p>Les prestations de ménage et repassage à domicile sont éligibles au crédit d'impôt de 50 % pour les clients particuliers, dans les conditions légales, hors paiement en espèces (source : service-public.fr). Attestation fiscale annuelle fournie automatiquement. Les clients professionnels et les locations saisonnières ne sont pas éligibles.</p>
       </article>
 
       <article class="legal-article">
-        <h2>Litiges</h2>
+        <h2>Médiation de la consommation</h2>
         <p>Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, BrightNest Services adhère au CM2C (Centre de Médiation de la Consommation de Conciliateurs de Justice), 49 rue de Ponthieu, 75008 Paris, pour la résolution amiable et gratuite des litiges de consommation. Vous pouvez déclarer un litige sur <a href="https://www.cm2c.net/declarer-un-litige.php" target="_blank" rel="noopener">www.cm2c.net/declarer-un-litige.php</a>, par téléphone au 01 89 47 00 14, ou par e-mail à litiges@cm2c.net. À défaut d'accord amiable, le tribunal compétent est celui de Montpellier.</p>
-        <p class="legal-updated">Mise à jour : 2 septembre 2026.</p>
+        <p class="legal-updated">Mise à jour : 25 septembre 2026.</p>
       </article>
 
     </div>
@@ -227,9 +218,12 @@ footer{background:var(--text);padding:38px 5%}
       <a href="/#contact">Contact</a>
       <a href="/mentions-legales">Mentions légales</a>
       <a href="/cgv">CGV</a>
+      <a href="/confidentialite">Confidentialité</a>
+      <a href="#" onclick="openCookiePrefs(event)">Gérer les cookies</a>
     </div>
   </div>
-  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Agrément SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; 💶 Éligible crédit d'impôt 50% &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Déclaration SAP n° SAP951623024 &nbsp;•&nbsp; <a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a> &nbsp;•&nbsp; 💶 Éligible au crédit d'impôt de 50 %* &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret" style="border-top:none;padding-top:0;margin-top:0;">*Pour les particuliers, dans les conditions légales.</div>
 </footer>
 
 <!-- WHATSAPP -->
