@@ -10,13 +10,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F28Q9KXGM9"></script>
+<!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
+<script src="/cookie-consent.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F28Q9KXGM9');
-  gtag('event', 'conversion', {'event_category': 'form', 'event_label': 'devis_soumis'});
+  document.addEventListener('DOMContentLoaded', function(){
+    if(typeof gtag === 'function'){
+      gtag('event', 'conversion', {'event_category': 'form', 'event_label': 'devis_soumis'});
+    }
+  });
 </script>
 <style>
 :root {
@@ -132,7 +133,7 @@ footer{background:var(--text);padding:24px 5%;text-align:center}
 
 <footer>
   <div class="footer-logo"><span class="bright">Bright</span><span class="nest">Nest</span>&nbsp;<span style="color:rgba(255,255,255,.5)">Services</span></div>
-  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Agrément SAP n° SAP951623024 &nbsp;•&nbsp; © 2026 BrightNest Services</div>
+  <div class="footer-siret">SIRET 95162302400019 &nbsp;•&nbsp; Déclaration SAP n° SAP951623024 &nbsp;•&nbsp; <a href="/mentions-legales" style="color:inherit;text-decoration:underline;">Mentions légales</a> &nbsp;•&nbsp; <a href="/cgv" style="color:inherit;text-decoration:underline;">CGV</a> &nbsp;•&nbsp; <a href="/confidentialite" style="color:inherit;text-decoration:underline;">Confidentialité</a> &nbsp;•&nbsp; <a href="#" onclick="openCookiePrefs(event)" style="color:inherit;text-decoration:underline;">Gérer les cookies</a> &nbsp;•&nbsp; © 2026 BrightNest Services</div>
 </footer>
 
 </body>
