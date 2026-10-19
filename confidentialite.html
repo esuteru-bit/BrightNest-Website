@@ -23,8 +23,6 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
 <script src="/cookie-consent.js"></script>
-<!-- Calendly popup : le script n'est chargé qu'au clic -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -133,7 +131,6 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="/#credit-impot">Crédit d'impôt</a></li>
       <li><a href="/#faq">FAQ</a></li>
       <li><a href="/#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -146,7 +143,6 @@ footer{background:var(--text);padding:38px 5%}
   <a href="/#credit-impot" onclick="document.getElementById('mobileNav').classList.remove('open')">Crédit d'impôt</a>
   <a href="/#faq" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQ</a>
   <a href="/#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="openCalendly();document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <!-- CONFIDENTIALITÉ -->
@@ -166,8 +162,7 @@ footer{background:var(--text);padding:38px 5%}
           <thead><tr><th>Outil</th><th>Données</th><th>Finalité</th><th>Base légale</th></tr></thead>
           <tbody>
             <tr><td>Formulaire du site</td><td>Prénom, nom, téléphone, e-mail, adresse ou quartier, type de prestation, message</td><td>Répondre à la demande de devis</td><td>Mesures précontractuelles / exécution du contrat</td></tr>
-            <tr><td>Calendly</td><td>Nom, e-mail, créneau choisi</td><td>Prise de rendez-vous en ligne</td><td>Exécution du contrat</td></tr>
-            <tr><td>Google Analytics 4</td><td>Données de navigation, clics WhatsApp et Calendly, adresse IP anonymisée</td><td>Mesure d'audience du site</td><td>Consentement (bandeau cookies)</td></tr>
+            <tr><td>Google Analytics 4</td><td>Données de navigation, clics WhatsApp, adresse IP anonymisée</td><td>Mesure d'audience du site</td><td>Consentement (bandeau cookies)</td></tr>
             <tr><td>WhatsApp</td><td>Numéro de téléphone, contenu des messages</td><td>Échange direct avec le client</td><td>Exécution du contrat / intérêt légitime</td></tr>
             <tr><td>Abby</td><td>Coordonnées client, prestations facturées</td><td>Facturation</td><td>Obligation légale / exécution du contrat</td></tr>
             <tr><td>URSSAF (avance immédiate)</td><td>Identité du client, montant de la prestation</td><td>Gestion de l'avance immédiate du crédit d'impôt</td><td>Exécution du contrat / obligation légale</td></tr>
@@ -186,7 +181,7 @@ footer{background:var(--text);padding:38px 5%}
 
       <article class="legal-article">
         <h2>Destinataires et sous-traitants</h2>
-        <p>Les données sont traitées par BrightNest Services et, pour les besoins strictement nécessaires à leurs missions, par les sous-traitants et prestataires suivants : Netlify (hébergement du site), Calendly (prise de rendez-vous), Google (Google Analytics 4, mesure d'audience), Abby (facturation), l'URSSAF (avance immédiate du crédit d'impôt) et WhatsApp/Meta (messagerie). Aucune donnée n'est vendue à des tiers.</p>
+        <p>Les données sont traitées par BrightNest Services et, pour les besoins strictement nécessaires à leurs missions, par les sous-traitants et prestataires suivants : Netlify (hébergement du site), Google (Google Analytics 4, mesure d'audience), Abby (facturation), l'URSSAF (avance immédiate du crédit d'impôt) et WhatsApp/Meta (messagerie). Aucune donnée n'est vendue à des tiers.</p>
       </article>
 
       <article class="legal-article">
@@ -203,8 +198,8 @@ footer{background:var(--text);padding:38px 5%}
       <article class="legal-article" id="cookies">
         <h2>Cookies</h2>
         <p>Ce site utilise uniquement des cookies de mesure d'audience (Google Analytics 4) et un cookie technique de mémorisation de votre choix. Le cookie de mesure d'audience n'est déposé qu'après votre consentement, donné via le bandeau affiché lors de votre première visite (Consent Mode v2 : par défaut, tout est refusé tant que vous n'avez pas répondu).</p>
-        <h3>Suivi des clics WhatsApp et Calendly</h3>
-        <p>Lorsque vous acceptez les cookies, la mesure d'audience enregistre également les clics sur les liens WhatsApp et sur le bouton de réservation Calendly, afin de mesurer l'efficacité de ces canaux de contact.</p>
+        <h3>Suivi des clics WhatsApp</h3>
+        <p>Lorsque vous acceptez les cookies, la mesure d'audience enregistre également les clics sur les liens WhatsApp, afin de mesurer l'efficacité de ce canal de contact.</p>
         <h3>Votre choix</h3>
         <p>Votre choix (accepter ou refuser) est conservé 6 mois sur votre appareil. Vous pouvez le modifier à tout moment via le lien « Gérer les cookies » présent en bas de chaque page.</p>
         <p><a href="#" onclick="openCookiePrefs(event)">Gérer les cookies</a></p>
@@ -246,26 +241,16 @@ footer{background:var(--text);padding:38px 5%}
 </a>
 
 <script>
-// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+// ── Tracking GA4 des conversions WhatsApp ──
 document.addEventListener('click', function(e){
   var link = e.target.closest('a');
   if(!link) return;
   var href = link.getAttribute('href') || '';
-  var onclickAttr = link.getAttribute('onclick') || '';
   if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
     if(typeof gtag === 'function'){
       gtag('event', 'click_whatsapp', {
         event_category: 'contact',
         event_label: link.getAttribute('aria-label') || 'whatsapp_link',
-        page_path: window.location.pathname
-      });
-    }
-  }
-  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
-    if(typeof gtag === 'function'){
-      gtag('event', 'click_calendly', {
-        event_category: 'contact',
-        event_label: 'calendly_reserve',
         page_path: window.location.pathname
       });
     }

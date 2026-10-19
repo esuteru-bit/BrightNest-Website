@@ -90,8 +90,6 @@
   </script>
 <!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
 <script src="/cookie-consent.js"></script>
-<!-- Calendly popup : la feuille de style seule ne dépose pas de cookie, le script n'est chargé qu'au clic -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -459,7 +457,6 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="#credit-impot">Crédit d'impôt</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -472,7 +469,6 @@ footer{background:var(--text);padding:38px 5%}
   <a href="#credit-impot" onclick="closeMenu()">Crédit d'impôt</a>
   <a href="#faq" onclick="closeMenu()">FAQ</a>
   <a href="#contact" onclick="closeMenu()">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="openCalendly();closeMenu();return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <!-- HERO -->
@@ -484,7 +480,7 @@ footer{background:var(--text);padding:38px 5%}
     <p class="hero-sub">Une professionnelle formée au standard hôtelier, basée à Montpellier, je prends soin de votre logement comme si c'était le mien.</p>
     <p class="hero-body">Que ce soit pour votre logement principal, un grand ménage ponctuel ou la gestion de vos locations Airbnb, je vous aide à retrouver un intérieur propre, agréable et accueillant, en toute confiance.</p>
     <div class="hero-actions">
-      <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-primary">📅 Réserver un créneau</a>
+      <a href="https://wa.me/33758446510" target="_blank" rel="noopener" class="btn-primary">💬 Écrire sur WhatsApp</a>
       <a href="#contact" class="btn-outline">Demander un devis gratuit</a>
       <a href="#offres" class="btn-outline">Voir les services &amp; tarifs</a>
     </div>
@@ -689,7 +685,7 @@ footer{background:var(--text);padding:38px 5%}
           <p class="eco-note">🌿 Produits éco en option. Pas d'intermédiaire : moi directement !</p>
           <p class="freq-note">📅 Hebdomadaire, tous les 15 jours ou mensuel. Durée estimée lors de la visite gratuite.</p>
         </div>
-        <div class="scard-footer"><a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-scard">📅 Réserver un créneau</a></div>
+        <div class="scard-footer"><a href="https://wa.me/33758446510" target="_blank" rel="noopener" class="btn-scard">💬 Écrire sur WhatsApp</a></div>
       </div>
 
       <!-- PARTICULIERS : grand nettoyage -->
@@ -759,7 +755,7 @@ footer{background:var(--text);padding:38px 5%}
         </div>
         <div class="scard-footer" style="display:flex;flex-direction:column;gap:8px;">
           <a href="/menage-ponctuel-montpellier" class="btn-scard" style="background:var(--green);">Voir les tarifs complets →</a>
-          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-scard" style="background:transparent;color:var(--green);border:1.5px solid var(--green);">📅 Réserver un créneau</a>
+          <a href="https://wa.me/33758446510" target="_blank" rel="noopener" class="btn-scard" style="background:transparent;color:var(--green);border:1.5px solid var(--green);">💬 Écrire sur WhatsApp</a>
         </div>
       </div>
       <div class="scard">
@@ -825,7 +821,7 @@ footer{background:var(--text);padding:38px 5%}
         </div>
         <div class="scard-footer" style="display:flex;flex-direction:column;gap:8px;">
           <a href="/nettoyage-airbnb-montpellier" class="btn-scard" style="background:var(--green);">Voir les tarifs complets →</a>
-          <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-scard" style="background:transparent;color:var(--green);border:1.5px solid var(--green);">📅 Organiser mes inter-séjours</a>
+          <a href="https://wa.me/33758446510" target="_blank" rel="noopener" class="btn-scard" style="background:transparent;color:var(--green);border:1.5px solid var(--green);">💬 Écrire sur WhatsApp</a>
         </div>
       </div>
 
@@ -1042,7 +1038,6 @@ footer{background:var(--text);padding:38px 5%}
     </div>
     <p style="max-width:680px;margin:0 auto 20px;font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.6;">Le vendeur remet gratuitement un devis personnalisé au consommateur à qui il propose une prestation ou un ensemble de prestations dont le prix total est supérieur ou égal à 100 € TTC ou au consommateur qui lui en fait la demande. Toutes les prestations sont réalisées en mode prestataire : BrightNest Services intervient directement, le client n'est pas employeur.</p>
     <a href="#contact" class="btn-white">Demander mon devis gratuit →</a>
-    <a href="javascript:void(0)" onclick="openCalendly();return false;" class="btn-white" style="margin-top:12px;background:var(--amber);border-color:var(--amber);">📅 Réserver directement un créneau</a>
   </div>
 </div>
 
@@ -1058,7 +1053,6 @@ footer{background:var(--text);padding:38px 5%}
           <div class="c-item"><div class="c-icon">📞</div><div><div class="c-label">Téléphone</div><div class="c-val"><a href="tel:+33758446510">07 58 44 65 10</a></div></div></div>
           <div class="c-item"><div class="c-icon">✉️</div><div><div class="c-label">E-mail</div><div class="c-val"><a href="mailto:contact@brightnestservices.fr">contact@brightnestservices.fr</a></div></div></div>
           <div class="c-item"><div class="c-icon">💬</div><div><div class="c-label">WhatsApp</div><div class="c-val"><a href="https://wa.me/33758446510" target="_blank" rel="noopener">07 58 44 65 10</a></div></div></div>
-          <div class="c-item"><div class="c-icon">📅</div><div><div class="c-label">Réservation en ligne</div><div class="c-val"><a href="javascript:void(0)" onclick="openCalendly();return false;" style="color:var(--green);font-weight:700;">Choisir mon créneau →</a></div></div></div>
           <div class="c-item"><div class="c-icon">📍</div><div><div class="c-label">Zone</div><div class="c-val">Montpellier</div></div></div>
         </div>
       </div>
@@ -1127,8 +1121,6 @@ footer{background:var(--text);padding:38px 5%}
 </a>
 
 <script>
-/* openCalendly() est fourni par cookie-consent.js (chargement au clic) */
-
 function toggleMenu(){
   var nav = document.getElementById('mobileNav');
   var btn = document.querySelector('.hamburger');
@@ -1148,26 +1140,16 @@ document.querySelectorAll('.mobile-nav a:not([onclick])').forEach(function(a){
   a.addEventListener('click', closeMenu);
 });
 
-// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+// ── Tracking GA4 des conversions WhatsApp ──
 document.addEventListener('click', function(e){
   var link = e.target.closest('a');
   if(!link) return;
   var href = link.getAttribute('href') || '';
-  var onclickAttr = link.getAttribute('onclick') || '';
   if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
     if(typeof gtag === 'function'){
       gtag('event', 'click_whatsapp', {
         event_category: 'contact',
         event_label: link.getAttribute('aria-label') || 'whatsapp_link',
-        page_path: window.location.pathname
-      });
-    }
-  }
-  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
-    if(typeof gtag === 'function'){
-      gtag('event', 'click_calendly', {
-        event_category: 'contact',
-        event_label: 'calendly_reserve',
         page_path: window.location.pathname
       });
     }

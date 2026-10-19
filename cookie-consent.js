@@ -158,31 +158,4 @@
     init();
   }
 
-  /* ── CALENDLY : chargé uniquement au premier clic ── */
-  var CALENDLY_URL = 'https://calendly.com/estellessex';
-  var calendlyLoading = false;
-  window.openCalendly = function(){
-    if(typeof Calendly !== 'undefined' && Calendly.initPopupWidget){
-      Calendly.initPopupWidget({ url: CALENDLY_URL });
-      return false;
-    }
-    if(calendlyLoading) return false;
-    calendlyLoading = true;
-    var s = document.createElement('script');
-    s.src = 'https://assets.calendly.com/assets/external/widget.js';
-    s.onload = function(){
-      calendlyLoading = false;
-      if(typeof Calendly !== 'undefined' && Calendly.initPopupWidget){
-        Calendly.initPopupWidget({ url: CALENDLY_URL });
-      } else {
-        window.open(CALENDLY_URL, '_blank');
-      }
-    };
-    s.onerror = function(){
-      calendlyLoading = false;
-      window.open(CALENDLY_URL, '_blank');
-    };
-    document.body.appendChild(s);
-    return false;
-  };
 })();

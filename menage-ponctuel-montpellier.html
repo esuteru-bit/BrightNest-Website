@@ -70,8 +70,6 @@
 </script>
 <!-- Cookies : Google Analytics 4 n'est chargé qu'après consentement (Consent Mode v2) -->
 <script src="/cookie-consent.js"></script>
-<!-- Calendly popup : le script n'est chargé qu'au clic -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -330,7 +328,6 @@ footer{background:var(--text);padding:38px 5%}
       <li><a href="/#credit-impot">Crédit d'impôt</a></li>
       <li><a href="/#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
-      <li><a href="javascript:void(0)" onclick="openCalendly();return false;" class="nav-cta-reserve">📅 Réserver</a></li>
     </ul>
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -343,7 +340,6 @@ footer{background:var(--text);padding:38px 5%}
   <a href="/#credit-impot" onclick="document.getElementById('mobileNav').classList.remove('open')">Crédit d'impôt</a>
   <a href="/#faq" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQ</a>
   <a href="#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Devis gratuit</a>
-  <a href="javascript:void(0)" onclick="openCalendly();document.getElementById('mobileNav').classList.remove('open');return false;" style="color:var(--green);font-weight:700;">📅 Réserver</a>
 </div>
 
 <div class="breadcrumb">
@@ -849,26 +845,16 @@ function toggleFaq(el) {
 </a>
 
 <script>
-// ── Tracking GA4 des conversions WhatsApp et Calendly ──
+// ── Tracking GA4 des conversions WhatsApp ──
 document.addEventListener('click', function(e){
   var link = e.target.closest('a');
   if(!link) return;
   var href = link.getAttribute('href') || '';
-  var onclickAttr = link.getAttribute('onclick') || '';
   if(href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1){
     if(typeof gtag === 'function'){
       gtag('event', 'click_whatsapp', {
         event_category: 'contact',
         event_label: link.getAttribute('aria-label') || 'whatsapp_link',
-        page_path: window.location.pathname
-      });
-    }
-  }
-  if(onclickAttr.indexOf('openCalendly') !== -1 || onclickAttr.indexOf('Calendly.initPopupWidget') !== -1){
-    if(typeof gtag === 'function'){
-      gtag('event', 'click_calendly', {
-        event_category: 'contact',
-        event_label: 'calendly_reserve',
         page_path: window.location.pathname
       });
     }
