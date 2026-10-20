@@ -4,7 +4,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
@@ -20,3 +20,15 @@
 
 /*.svg
   Cache-Control: public, max-age=604800
+
+/*.webp
+  Cache-Control: public, max-age=3600
+
+/*.png
+  Cache-Control: public, max-age=3600
+
+/*.xml
+  Cache-Control: public, max-age=3600
+
+/*.txt
+  Cache-Control: public, max-age=3600
